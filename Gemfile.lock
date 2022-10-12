@@ -27,10 +27,10 @@ GEM
     unf_ext (0.0.8.2)
 
 PLATFORMS
-  x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   http (~> 5)
 
 BUNDLED WITH
-   2.3.7
+   2.3.22
