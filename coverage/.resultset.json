@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/home/jerry940100/PapMon/lib/paperswithcode_api.rb": {
+=======
+      "/home/demi871023/SOA/PapMon/lib/paperswithcode_api.rb": {
+>>>>>>> 0a184e4854f6798134dc9bcab00b9bba97077834
         "lines": [
           null,
           null,
@@ -62,7 +66,11 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/home/jerry940100/PapMon/lib/paper.rb": {
+=======
+      "/home/demi871023/SOA/PapMon/lib/paper.rb": {
+>>>>>>> 0a184e4854f6798134dc9bcab00b9bba97077834
         "lines": [
           null,
           null,
@@ -117,7 +125,11 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/home/jerry940100/PapMon/lib/repository.rb": {
+=======
+      "/home/demi871023/SOA/PapMon/lib/repository.rb": {
+>>>>>>> 0a184e4854f6798134dc9bcab00b9bba97077834
         "lines": [
           null,
           null,
@@ -144,7 +156,11 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/home/jerry940100/PapMon/lib/dataset.rb": {
+=======
+      "/home/demi871023/SOA/PapMon/lib/dataset.rb": {
+>>>>>>> 0a184e4854f6798134dc9bcab00b9bba97077834
         "lines": [
           null,
           null,
@@ -240,6 +256,10 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1666110905
+=======
+    "timestamp": 1666105299
+>>>>>>> 0a184e4854f6798134dc9bcab00b9bba97077834
   }
 }
