@@ -33,7 +33,7 @@ describe 'Test Paperswithcode API Library' do
     it 'SAD: should raise exception on invalid paper name' do
       _(proc {
           PapMon::PaperswithcodeApi.new.paper('be-your-own-teacher')
-        }).must_raise PapMon::PaperswithcodeApi::Errors::NotFound
+        }).must_raise PapMon::Response::Errors::NotFound
     end
   end
 
