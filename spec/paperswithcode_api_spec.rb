@@ -1,13 +1,23 @@
 # frozen_string_literal: true
 
-require 'minitest/autorun'
-require 'minitest/rg'
-require 'yaml'
-require_relative '../lib/paperswithcode_api'
-PAPERNAME = 'be-your-own-teacher-improve-the-performance'
-CORRECT = YAML.safe_load(File.read('fixtures/results.yml'))
-# CONFIG = YAML.safe_load(File.read('config/secrets.yml'))
+require_relative 'spec_helper'
+
 describe 'Test Paperswithcode API Library' do
+  VCR.configure do |c|
+    c.cassette_library_dir = CASSETTES_FOLDER
+    c.hook_into :webmock
+  end
+
+  before do
+    VCR.insert_cassette CASSETTE_FILE,
+                        record: :new_episodes,
+                        match_requests_on: %i[method uri headers]
+  end
+
+  after do
+    VCR.eject_cassette
+  end
+
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
       paper = PapMon::PaperswithcodeApi.new.paper(PAPERNAME)
