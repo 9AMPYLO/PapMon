@@ -4,9 +4,11 @@ Based on ther **trends** and **keywords** to recommend the latest papers, open s
 
 ## Product Language
 
-* User -> Researcher
+* Paper -> paper
 
-* Article -> Paper
+* Datasets -> datasets
+
+* Repository -> repository
 
 ## Overview
 
