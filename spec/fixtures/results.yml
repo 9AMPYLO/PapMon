@@ -1,0 +1,33 @@
+---
+id: be-your-own-teacher-improve-the-performance
+arxiv_id: '1905.08094'
+url_abs: https://arxiv.org/abs/1905.08094v1
+title: 'Be Your Own Teacher: Improve the Performance of Convolutional Neural Networks
+  via Self Distillation'
+authors:
+- Kaisheng Ma
+- Jiebo Song
+- Linfeng Zhang
+- Jingwei Chen
+- Chenglong Bao
+- Anni Gao
+published: '2019-05-17'
+proceeding: iccv-2019-10
+datasets:
+- id: imagenet
+  name: ImageNet
+  full_name: ''
+  url: https://image-net.org/index.php
+- id: cifar-100
+  name: CIFAR-100
+  full_name: ''
+  url: https://www.cs.toronto.edu/~kriz/cifar.html
+repositories:
+- url: https://github.com/luanyunteng/pytorch-be-your-own-teacher
+  owner: luanyunteng
+  name: pytorch-be-your-own-teacher
+  description: 'A pytorch implementation of paper ''Be Your Own Teacher: Improve the
+    Performance of Convolutional Neural Networks via Self Distillation'', https://arxiv.org/abs/1905.08094'
+  stars: 93
+  framework: pytorch
+  is_official: false
