@@ -20,7 +20,7 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
-      paper = PapMon::PaperswithcodeApi.new.paper(PAPERNAME)
+      paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
       _(paper.id).must_equal CORRECT['id']
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
@@ -32,14 +32,14 @@ describe 'Test Paperswithcode API Library' do
 
     it 'SAD: should raise exception on invalid paper name' do
       _(proc {
-          PapMon::PaperswithcodeApi.new.paper('be-your-own-teacher')
+          PapMon::PapersWithCodeApi.new.paper('be-your-own-teacher')
         }).must_raise PapMon::Response::Errors::NotFound
     end
   end
 
   describe 'Dataset information' do
     before do
-      @paper = PapMon::PaperswithcodeApi.new.paper(PAPERNAME)
+      @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
     end
 
     it 'HAPPY: should provide correct dataset information' do
@@ -53,7 +53,7 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Repository information' do
     before do
-      @paper = PapMon::PaperswithcodeApi.new.paper(PAPERNAME)
+      @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
     end
 
     it 'HAPPY: should provide correct repository information' do
