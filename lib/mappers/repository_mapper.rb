@@ -34,7 +34,7 @@ module PapMon
         end
 
         def repo_url
-          @data['repo_url']
+          @data['url']
         end
 
         def owner
@@ -42,7 +42,7 @@ module PapMon
         end
 
         def repo_name
-          @data['repo_name']
+          @data['name']
         end
       end
     end

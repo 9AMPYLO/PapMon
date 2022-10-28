@@ -10,8 +10,8 @@ module PapMon
       end
 
       def load_several(paper_id)
-        @gateway.datasets_data(paper_id)['results'].map do |repo|
-          DatasetMapper.build_entity(repo)
+        @gateway.datasets_data(paper_id)['results'].map do |dataset|
+          DatasetMapper.build_entity(dataset)
         end
       end
 

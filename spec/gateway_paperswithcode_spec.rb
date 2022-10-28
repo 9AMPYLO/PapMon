@@ -49,7 +49,7 @@ describe 'Test Paperswithcode API Library' do
     end
 
     it 'HAPPY: should recognize every dataset' do
-      _(@paper.datasets).map do |dataset|
+      @paper.datasets.each do |dataset|
         _(dataset).must_be_kind_of PapMon::Entity::Dataset
       end
     end
@@ -73,7 +73,7 @@ describe 'Test Paperswithcode API Library' do
     end
 
     it 'HAPPY: should recognize every repository' do
-      _(@paper.repositories).map do |repository|
+      @paper.repositories.map do |repository|
         _(repository).must_be_kind_of PapMon::Entity::Repository
       end
     end
