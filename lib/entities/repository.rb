@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'dry-struct'
+require 'dry-types'
+
 # PaperWithCode API module
 module PapMon
   # Entity module
@@ -7,9 +10,9 @@ module PapMon
     class Repository < Dry::Struct
       include Dry.Types
 
-      attribute :repo_url, Strict::String
-      attribute :owner, Strict::String
-      attribute :repo_name, Strict::String
+      attribute :repo_url, String.optional
+      attribute :owner, String.optional
+      attribute :repo_name, String.optional
     end
   end
 end

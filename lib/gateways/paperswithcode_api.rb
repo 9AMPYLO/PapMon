@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require 'http'
-require_relative 'paper'
-require_relative 'dataset'
-require_relative 'repository'
 
 # PaperWithCode API module
 module PapMon
@@ -19,7 +16,7 @@ module PapMon
       datasets_data = Request.new.datasets(paper_id).parse
     end
 
-    def repositories(paper_id)
+    def repositories_data(paper_id)
       repositories_data = Request.new.repositories(paper_id).parse
     end
 
@@ -39,7 +36,7 @@ module PapMon
 
       def datasets(paper_id)
         datasets_url = API_PROJECT_ROOT + ['papers', paper_id, 'datasets', ''].join('/')
-        datasets_data = get(dataset_url)
+        datasets_data = get(datasets_url)
       end
 
       def repositories(paper_id)
@@ -48,14 +45,13 @@ module PapMon
       end
     end
 
-    # response class
+    # Decorates HTTP responses from the API
     class Response < SimpleDelegator
-      module Errors
-        class NotFound < StandardError; end
-      end
+      NotFound = Class.new(StandardError)
       HTTP_ERROR = {
-        404 => Errors::NotFound
+        404 => NotFound
       }.freeze
+
       def initialize(http_response)
         super(http_response)
         @http_response = http_response

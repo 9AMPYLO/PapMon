@@ -9,8 +9,8 @@ module PapMon
         @gateway = @gateway_class.new
       end
 
-      def load_several(array_of_repo)
-        array_of_repo['results'].map do |repo|
+      def load_several(paper_id)
+        @gateway.repositories_data(paper_id)['results'].map do |repo|
           RepositoryMapper.build_entity(repo)
         end
       end

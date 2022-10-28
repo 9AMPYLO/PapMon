@@ -1,19 +1,23 @@
 # frozen_string_literal: true
 
+require 'dry-struct'
+require 'dry-types'
+
 require_relative 'dataset'
+require_relative 'repository'
 
 # PaperWithCode API module
 module PapMon
   # Entity module
   module Entity
-    class Repository < Dry::Struct
+    class Paper < Dry::Struct
       include Dry.Types
 
       attribute :id, String.optional
       attribute :arxiv_id, String.optional
       attribute :url_abs, String.optional
       attribute :title, String.optional
-      attribute :authors, String.optional
+      attribute :authors, Array.of(String).optional
       attribute :published, String.optional
       attribute :proceeding, String.optional
       attribute :repositories, Array.of(Repository).optional

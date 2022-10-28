@@ -10,7 +10,12 @@ end
 
 desc 'run tests'
 task :spec do
-  sh 'ruby spec/paperswithcode_api_spec.rb'
+  sh 'ruby spec/gateway_paperswithcode_spec.rb'
+end
+
+desc 'Keep rerunning tests upon file changes'
+task :respec do
+  sh "rerun -c 'rake spec' --ignore 'coverage/*'"
 end
 
 namespace :vcr do

@@ -9,9 +9,9 @@ module PapMon
         @gateway = @gateway_class.new
       end
 
-      def load_several(array_of_dataset)
-        array_of_dataset['results'].map do |repo|
-          RepositoryMapper.build_entity(repo)
+      def load_several(paper_id)
+        @gateway.datasets_data(paper_id)['results'].map do |repo|
+          DatasetMapper.build_entity(repo)
         end
       end
 

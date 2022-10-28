@@ -70,11 +70,11 @@ module PapMon
       end
 
       def repositories
-        @repository_mapper.load_several(@data['repositories'])
+        @repository_mapper.load_several(@data['id'])
       end
 
       def datasets
-        @dataset_mapper.load_several(@data['datasets'])
+        @dataset_mapper.load_several(@data['id'])
       end
     end
   end
