@@ -13,7 +13,6 @@ module PapMon
 
     def paper_data(papername)
       paper_data = Request.new.paper(papername).parse
-      # Paper.new(paper_response, self)
     end
 
     def datasets_data(paper_id)
