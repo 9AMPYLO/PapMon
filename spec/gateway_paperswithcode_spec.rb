@@ -20,7 +20,8 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
-      paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
+      # paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
+      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
       _(paper.id).must_equal CORRECT['id']
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
@@ -32,14 +33,25 @@ describe 'Test Paperswithcode API Library' do
 
     it 'SAD: should raise exception on invalid paper name' do
       _(proc {
-          PapMon::PapersWithCodeApi.new.paper('be-your-own-teacher')
-        }).must_raise PapMon::Response::Errors::NotFound
+          PapMon::PapersWithCode::PaperMapper.new.find('be-your-own-teacher')
+        }).must_raise PapMon::PapersWithCodeApi::Response::NotFound
     end
   end
 
   describe 'Dataset information' do
     before do
-      @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
+      # @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+    end
+
+    it 'HAPPY: should recognize datasets' do
+      _(@paper.datasets).must_be_kind_of Array
+    end
+
+    it 'HAPPY: should recognize every dataset' do
+      @paper.datasets.each do |dataset|
+        _(dataset).must_be_kind_of PapMon::Entity::Dataset
+      end
     end
 
     it 'HAPPY: should provide correct dataset information' do
@@ -53,7 +65,17 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Repository information' do
     before do
-      @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+    end
+
+    it 'HAPPY: should recognize repositories' do
+      _(@paper.repositories).must_be_kind_of Array
+    end
+
+    it 'HAPPY: should recognize every repository' do
+      @paper.repositories.map do |repository|
+        _(repository).must_be_kind_of PapMon::Entity::Repository
+      end
     end
 
     it 'HAPPY: should provide correct repository information' do

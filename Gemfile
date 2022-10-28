@@ -11,6 +11,7 @@ gem 'minitest-rg', '~> 5'
 gem 'simplecov', '~> 0'
 gem 'vcr', '~> 6'
 gem 'webmock', '~> 3'
+gem 'rerun', '~> 0'
 
 # Utility Tools
 gem 'rake'
@@ -19,3 +20,7 @@ gem 'rake'
 gem 'flog'
 gem 'reek'
 gem 'rubocop'
+
+# Validation
+gem 'dry-struct'
+gem 'dry-types'
