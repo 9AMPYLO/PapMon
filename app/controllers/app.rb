@@ -22,13 +22,21 @@ module PapMon
 
       routing.on 'paper' do
         routing.is do
-          # POST /project/
+          # POST /paper/
           routing.post do
-            id = 'be-your-own'
+            id = routing.params['id']
+            routing.halt 400, 'Missing paper id' unless id
             routing.redirect "paper/#{id}"
           end
         end
-        view 'paper'
+
+        routing.on String do |id|
+          # GET /paper/[id]
+          routing.get do
+            paperswithcode_paper = PapersWithCode::PaperMapper.new.find(id)
+            view 'paper', locals: { paper: paperswithcode_paper }
+          end
+        end
       end
     end
   end

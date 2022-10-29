@@ -28,21 +28,22 @@ h1 {
     font-size: 1.2em;
   }
   
-  .project.attribute {
+  .paper.attribute {
     color: rgb(250, 202, 116);
     font-weight: bold;
   }
   
-  .project.detail {
-    color: grey;
+  .paper.detail {
+    color: rgb(196, 155, 155);
   }
   
-  .project.owner {
+  .paper.owner {
     font-weight: bold
   }
   
-  .project.name {
-    
+  .paper.title {
+    color:rgb(163, 212, 255);
+    font-family: "Times New Roman", Times, serif;
   }
   
   .vcenter {

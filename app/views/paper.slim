@@ -1,8 +1,42 @@
 .container
-  .row
+  .row.top-buffer
+    h3
+      span.paper.title
+        = paper.title
   .container
     .row
       .col-lg-1.col-md-2.col-sm-2
-        span.project.attribute Paper:
+        span.paper.attribute Authors:
       .col-lg-11.col-md-10.col-sm-6
+        span.paper.detail
+          - paper.authors.each do |author|
+            = author
+            br
     .row.top-buffer
+      .col-lg-1.col-md-2.col-sm-2
+        span.paper.attribute Publish:
+      .col-lg-11.col-md-10.col-sm-6
+        span.paper.detail
+          = paper.published
+    .row.top-buffer
+      .col-lg-1.col-md-2.col-sm-2
+        span.paper.attribute Proceeding:
+      .col-lg-11.col-md-10.col-sm-6
+        span.paper.detail
+          = paper.proceeding
+    .row.top-buffer
+      .col-lg-1.col-md-2.col-sm-2
+        span.paper.attribute Datasets:
+      .col-lg-11.col-md-10.col-sm-6
+        span.paper.detail
+          - paper.datasets.each do |dataset|
+            = dataset.name
+            br
+    .row.top-buffer
+      .col-lg-1.col-md-2.col-sm-2
+        span.paper.attribute Repos:
+      .col-lg-11.col-md-10.col-sm-6
+        span.paper.detail
+          - paper.repositories.each do |repo|
+            = repo.repo_url
+            br
