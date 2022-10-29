@@ -21,6 +21,9 @@ gem 'webmock', '~> 3'
 # Utility Tools
 gem 'rake'
 
+# Debugging
+gem 'pry'
+
 # Code Quality
 gem 'flog'
 gem 'reek'
@@ -30,5 +33,10 @@ gem 'rubocop'
 gem 'pry'
 
 # Validation
-gem 'dry-struct'
-gem 'dry-types'
+gem 'dry-struct', '~> 1'
+gem 'dry-types', '~> 1'
+
+# Web Application
+gem 'puma', '~> 5'
+gem 'roda', '~> 3'
+gem 'slim', '~> 4'
