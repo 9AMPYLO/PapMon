@@ -34,7 +34,7 @@ h1 {
   }
   
   .paper.detail {
-    color: rgb(196, 155, 155);
+    color: rgb(255, 242, 218);
   }
   
   .paper.owner {
@@ -42,8 +42,11 @@ h1 {
   }
   
   .paper.title {
-    color:rgb(163, 212, 255);
-    font-family: "Times New Roman", Times, serif;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size:x-large;
+    
+    /* font-family: "Times New Roman", Times, serif; */
   }
   
   .vcenter {
@@ -74,6 +77,15 @@ h1 {
   .query-bar {
     background-color: #EEEEEE;
     padding: 5px 5px 5px 5px;
+  }
+
+  .div{
+    padding-top: 50px;
+    
+  }
+
+  .div-small{
+    padding-top: 20px;
   }
   
   footer {
