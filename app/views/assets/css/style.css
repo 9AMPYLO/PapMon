@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(67, 67, 67);
+}
+
+img{
+    src: url(/app/views/assets/image/logo.png);
+}
+
+h1 {
+    font-weight: bold;
+  }
+  
+  /* Page Header Title */
+  .text-underline-hover {
+    color: rgb(250, 202, 116);
+    text-decoration: none;
+  }
+  /* Page Header Title when hover*/
+  .text-underline-hover:hover {
+    color: rgb(255, 166, 0);
+    text-decoration: none;
+  }
+
+  
+  .top-buffer { margin-top:20px; }
+  
+  .posting.body {
+    font-size: 1.2em;
+  }
+  
+  .paper.attribute {
+    color: rgb(250, 202, 116);
+    font-weight: bold;
+  }
+  
+  .paper.detail {
+    color: rgb(255, 242, 218);
+  }
+  
+  .paper.owner {
+    font-weight: bold
+  }
+  
+  .paper.title {
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size:x-large;
+    
+    /* font-family: "Times New Roman", Times, serif; */
+  }
+  
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  
+  .vertical-align {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vertical-align > [class^="col-"],
+  .vertical-align > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Optional, to align inner items 
+                                horizontally inside the column */
+  }
+  
+  .top-buffer { margin-top:20px; }
+  
+  .blank-row {
+    height: 30px;
+  }
+  
+  .query-bar {
+    background-color: #EEEEEE;
+    padding: 5px 5px 5px 5px;
+  }
+
+  .div{
+    padding-top: 50px;
+    
+  }
+
+  .div-small{
+    padding-top: 20px;
+  }
+  
+  footer {
+    padding: 0.5in;
+    font-size:11px;
+    color:rgb(100, 100, 100);
+  }
