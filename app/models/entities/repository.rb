@@ -10,9 +10,9 @@ module PapMon
     class Repository < Dry::Struct
       include Dry.Types
 
+      attribute :id, String.optional
+      attribute :origin_id, String.optional
       attribute :repo_url, String.optional
-      attribute :owner, String.optional
-      attribute :repo_name, String.optional
     end
   end
 end

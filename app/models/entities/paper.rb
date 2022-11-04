@@ -14,6 +14,7 @@ module PapMon
       include Dry.Types
 
       attribute :id, String.optional
+      attribute :origin_id, String.optional
       attribute :arxiv_id, String.optional
       attribute :url_abs, String.optional
       attribute :title, String.optional
