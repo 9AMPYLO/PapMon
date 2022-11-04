@@ -7,7 +7,7 @@ Sequel.migration do
     create_table(:datasets) do
       primary_key :id
 
-      # Integer :origin_id, unique: true
+      String :origin_id, unique: true
       String :name
       String :url
     end

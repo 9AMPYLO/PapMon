@@ -8,7 +8,7 @@ Sequel.migration do
       primary_key :id
       foreign_key :repos_id, :repos
 
-      # Integer :origin_id, unique: true
+      String :origin_id, unique: true
       String :arxiv_id, unique: true
       String :url_abs
       String :title
