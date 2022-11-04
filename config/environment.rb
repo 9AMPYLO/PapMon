@@ -17,9 +17,9 @@ module PapMon
         path: File.expand_path('config/secrets.yml')
       )
       Figaro.load
-
       def self.config = Figaro.env
-      configure :development do
+
+      configure :development, :test do
         ENV['DATABASE_URL'] = "sqlite://#{config.DB_FILENAME}"
       end
 

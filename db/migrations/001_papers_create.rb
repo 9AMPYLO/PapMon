@@ -6,7 +6,7 @@ Sequel.migration do
   change do
     create_table(:papers) do
       primary_key :id
-      foreign_key :repos_id, :repos
+      foreign_key :repositories_id, :repositories
 
       String :origin_id, unique: true
       String :arxiv_id, unique: true
