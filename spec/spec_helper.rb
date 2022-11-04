@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+ENV['RACK_ENV'] = 'test'
+
 require 'simplecov'
 SimpleCov.start
 
@@ -15,5 +17,5 @@ require_app
 PAPERNAME = 'be-your-own-teacher-improve-the-performance'
 CORRECT = YAML.safe_load(File.read('spec/fixtures/results.yml'))
 
-CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-CASSETTE_FILE = 'paperswithcode_api'
+# CASSETTES_FOLDER = 'spec/fixtures/cassettes'
+# CASSETTE_FILE = 'paperswithcode_api'
