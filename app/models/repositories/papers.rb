@@ -47,7 +47,6 @@ module PapMon
         end
 
         def create_paper
-          puts @entity.to_attr_hash
           Database::PaperOrm.create(@entity.to_attr_hash)
         end
 

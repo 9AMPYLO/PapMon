@@ -4,7 +4,7 @@ module PapMon
   module Database
     # Paper ORM
     class PaperOrm < Sequel::Model(:papers)
-      one_to_many :paper_repos,
+      one_to_many :repositories,
                   class: :'PapMon::Database::RepositoryOrm',
                   key: :paper_id
       many_to_many :datasets,

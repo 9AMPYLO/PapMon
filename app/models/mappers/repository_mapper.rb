@@ -28,11 +28,11 @@ module PapMon
         def build_entity
           PapMon::Entity::Repository.new(
             id: nil,
-            repo_url:
+            url:
           )
         end
 
-        def repo_url
+        def url
           @data['url']
         end
 

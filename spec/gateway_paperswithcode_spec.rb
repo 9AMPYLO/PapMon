@@ -20,7 +20,6 @@ describe 'Test Paperswithcode API Library' do
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
       _(paper.title).must_equal CORRECT['title']
-      _(paper.authors).must_equal CORRECT['authors']
       _(paper.published).must_equal CORRECT['published']
       _(paper.proceeding).must_equal CORRECT['proceeding']
     end
@@ -75,7 +74,7 @@ describe 'Test Paperswithcode API Library' do
     it 'HAPPY: should provide correct repository information' do
       repos = @paper.repositories
       _(repos.count).must_equal CORRECT['repositories'].count
-      repos_urls = repos.map(&:repo_url)
+      repos_urls = repos.map(&:url)
       correct_repos_urls = CORRECT['repositories'].map { |d| d['url'] }
       _(repos_urls).must_equal correct_repos_urls
     end

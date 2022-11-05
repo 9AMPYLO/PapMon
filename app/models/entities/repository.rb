@@ -10,9 +10,13 @@ module PapMon
     class Repository < Dry::Struct
       include Dry.Types
 
-      attribute :id, String.optional
+      attribute :id, Integer.optional
       # attribute :origin_id, String.optional
-      attribute :repo_url, String.optional
+      attribute :url, String.optional
+      def to_attr_hash
+        # to_hash.reject { |key, _| %i[id owner contributors].include? key }
+        to_hash.except(:id)
+      end
     end
   end
 end
