@@ -27,3 +27,7 @@ Based on ther **trends** and **keywords** to recommend the latest papers, open s
 * Notifications on LINE or Telegram daily.
 
 * Customize **keywords** or **KOLs** to get personal recommended papers.
+
+## ER Diagram
+
+![Imgur](https://imgur.com/Xy56Rfo.png)
