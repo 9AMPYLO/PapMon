@@ -14,7 +14,7 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-PAPERNAME = 'be-your-own-teacher-improve-the-performance'
+PAPERID = 'be-your-own-teacher-improve-the-performance'
 CORRECT = YAML.safe_load(File.read('spec/fixtures/results.yml'))
 
 # CASSETTES_FOLDER = 'spec/fixtures/cassettes'

@@ -8,9 +8,9 @@ module PapMon
     # Finds the right repository for an entity object or class
     module For
       ENTITY_REPOSITORY = {
-        Entity::Paper => Repository::Papers,
-        Entity::Dataset => Repository::Datasets,
-        Entity::Repository => Repository::Repositories
+        Entity::Paper => Papers,
+        Entity::Dataset => Datasets,
+        Entity::Repository => Repositories
       }.freeze
 
       def self.klass(entity_klass)
