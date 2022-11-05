@@ -336,4 +336,88 @@ http_interactions:
       encoding: UTF-8
       string: '{"count":2,"next":null,"previous":null,"results":[{"id":"imagenet","name":"ImageNet","full_name":"","url":"https://image-net.org/index.php"},{"id":"cifar-100","name":"CIFAR-100","full_name":"","url":"https://www.cs.toronto.edu/~kriz/cifar.html"}]}'
   recorded_at: Tue, 18 Oct 2022 13:03:50 GMT
+- request:
+    method: get
+    uri: https://paperswithcode.com/api/v1/papers//repositories/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - paperswithcode.com
+      User-Agent:
+      - http.rb/5.1.0
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Sat, 05 Nov 2022 07:23:34 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), display-capture=(),
+        document-domain=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(),
+        interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
+      Content-Security-Policy:
+      - 'img-src * data: blob: ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
+        https://fonts.googleapis.com https://unpkg.com https://cdnjs.cloudflare.com
+        https://maxcdn.bootstrapcdn.com https://code.jquery.com https://production-assets.paperswithcode.com
+        https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
+        http://localhost:3000 http://localhost:4000; script-src ''self'' blob: ''unsafe-inline''
+        ''unsafe-eval'' https://www.googletagmanager.com https://www.google-analytics.com
+        https://unpkg.com https://ajax.googleapis.com https://browser.sentry-cdn.com
+        https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://code.jquery.com
+        https://cdn.jsdelivr.net https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
+        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000;
+        manifest-src https://production-assets.paperswithcode.com; frame-src https://www.youtube.com/;
+        default-src ''self''; font-src * data: blob: ''unsafe-inline''; connect-src
+        ''self'' https://unpkg.com https://www.google-analytics.com https://sentry.io
+        https://o241170.ingest.sentry.io https://production-assets.paperswithcode.com
+        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000
+        ws://localhost:3000 ws://localhost:4000; media-src * data: blob: ''unsafe-inline'';
+        report-uri https://o241170.ingest.sentry.io/api/5629308/security/?sentry_key=6284059d22664211881c89b4c409c619'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Frame-Options:
+      - DENY
+      Strict-Transport-Security:
+      - max-age=10368000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vh7eZ4qJvztR3WWco2Eyp6LJlUkO78kiumSQDMT%2F31ATvUThZU6jFigAj1MgpL1qZeByRDQNXTyQnuKxqvnxDyBDyNKvEnMzf2ILnUh%2B8RIVm7K43hA2TpAQV5ay%2FlwhjVf4yg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7653d83e8989f6a5-NRT
+    body:
+      encoding: ASCII-8BIT
+      string: |2
+
+        <!doctype html>
+        <html lang="en">
+        <head>
+          <title>Not Found</title>
+        </head>
+        <body>
+          <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
+        </body>
+        </html>
+  recorded_at: Sat, 05 Nov 2022 07:23:34 GMT
 recorded_with: VCR 6.1.0

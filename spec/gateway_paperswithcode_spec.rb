@@ -14,8 +14,8 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
-      # paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
-      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+      # paper = PapMon::PapersWithCodeApi.new.paper(PAPERID)
+      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
       _(paper.id).must_equal CORRECT['id']
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
@@ -34,8 +34,8 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Dataset information' do
     before do
-      # @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+      # @paper = PapMon::PapersWithCodeApi.new.paper(PAPERID)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
     end
 
     it 'HAPPY: should recognize datasets' do
@@ -59,7 +59,7 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Repository information' do
     before do
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
     end
 
     it 'HAPPY: should recognize repositories' do
