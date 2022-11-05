@@ -6,6 +6,10 @@ module PapMon
   module Repository
     # Repository for Datasets
     class Papers
+      def self.all
+        Database::PaperOrm.all.map { |db_paper| rebuild_entity(db_paper) }
+      end
+
       def self.find_id(id)
         rebuild_entity Database::PaperOrm.first(id:)
       end
