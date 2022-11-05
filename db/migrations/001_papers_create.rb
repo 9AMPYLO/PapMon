@@ -11,8 +11,7 @@ Sequel.migration do
       String :arxiv_id, unique: true
       String :url_abs
       String :title
-      String :authors
-      Date :published
+      String :published
       String :proceeding
     end
   end

@@ -20,7 +20,7 @@ module PapMon
         rebuild_entity Database::DatasetOrm.first(url:)
       end
 
-      def rebuild_entity(db_record)
+      def self.rebuild_entity(db_record)
         return nil unless db_record
 
         PapMon::Entity::Dataset.new(
@@ -31,8 +31,8 @@ module PapMon
         )
       end
 
-      def self.rebulid_many(db_records)
-        db_records.map { |db_record| rebuild_entity(db_record) }
+      def self.rebuild_many(db_records)
+        db_records.map { |db_record| Datasets.rebuild_entity(db_record) }
       end
 
       def self.db_find_or_create(entity)
