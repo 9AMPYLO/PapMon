@@ -30,4 +30,4 @@ Based on ther **trends** and **keywords** to recommend the latest papers, open s
 
 ## ER Diagram
 
-![Imgur](https://imgur.com/Xy56Rfo.png)
+![Imgur](https://imgur.com/ApbGUlb.png)
