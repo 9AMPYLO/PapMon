@@ -8,7 +8,6 @@ Sequel.migration do
       primary_key :id
       foreign_key :paper_id, :papers
 
-      String :origin_id, unique: true
       String :url, unique: true
     end
   end

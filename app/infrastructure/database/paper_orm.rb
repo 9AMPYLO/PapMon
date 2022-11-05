@@ -7,7 +7,7 @@ module PapMon
       one_to_many :paper_repos,
                   class: :'PapMon::Database::RepositoryOrm',
                   key: :paper_id
-      many_to_many :papers,
+      many_to_many :datasets,
                    class: :'PapMon::Database::DatasetOrm',
                    join_table: :papers_datasets,
                    left_key: :paper_id, right_key: :dataset_id

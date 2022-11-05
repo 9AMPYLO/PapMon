@@ -23,6 +23,10 @@ module PapMon
       attribute :proceeding, String.optional
       attribute :repositories, Array.of(Repository).optional
       attribute :datasets, Array.of(Dataset).optional
+      def to_attr_hash
+        # to_hash.reject { |key, _| %i[id owner contributors].include? key }
+        to_hash.except(:id, :repositories, :datasets)
+      end
     end
   end
 end

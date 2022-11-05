@@ -29,7 +29,7 @@ module PapMon
         rebuild_entity(db_paper)
       end
 
-      def rebuild_entity(db_record)
+      def self.rebuild_entity(db_record)
         return nil unless db_record
 
         PapMon::Entity::Paper.new(
@@ -47,6 +47,7 @@ module PapMon
         end
 
         def create_paper
+          puts @entity.to_attr_hash
           Database::PaperOrm.create(@entity.to_attr_hash)
         end
 

@@ -13,7 +13,7 @@ Sequel.migration do
       String :title
       String :authors
       Date :published
-      String :procceeding
+      String :proceeding
     end
   end
 end

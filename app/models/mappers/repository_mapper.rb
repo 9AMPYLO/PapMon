@@ -27,9 +27,8 @@ module PapMon
 
         def build_entity
           PapMon::Entity::Repository.new(
-            repo_url:,
-            owner:,
-            repo_name:
+            id: nil,
+            repo_url:
           )
         end
 
@@ -37,13 +36,13 @@ module PapMon
           @data['url']
         end
 
-        def owner
-          @data['owner']
-        end
+        # def owner
+        #   @data['owner']
+        # end
 
-        def repo_name
-          @data['name']
-        end
+        # def repo_name
+        #   @data['name']
+        # end
       end
     end
   end
