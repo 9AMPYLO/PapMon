@@ -17,7 +17,8 @@ module PapMon
 
       # GET /
       routing.root do
-        view 'home'
+        papers = Repository::For.klass(Entity::Paper).all
+        view 'home', locals: { papers: }
       end
 
       routing.on 'paper' do
@@ -26,6 +27,15 @@ module PapMon
           routing.post do
             id = routing.params['id']
             routing.halt 400, 'Missing paper id' unless id
+            # routing.redirect "paper/#{id}"
+
+            # Get paper from PapersWithCode
+            paperswithcode_paper = PapersWithCode::PaperMapper.new.find(id)
+
+            # Add paper to database
+            Repository::For.entity(paperswithcode_paper).create(paperswithcode_paper)
+
+            # Redirect viewer to paper page
             routing.redirect "paper/#{id}"
           end
         end
@@ -33,7 +43,7 @@ module PapMon
         routing.on String do |id|
           # GET /paper/[id]
           routing.get do
-            paperswithcode_paper = PapersWithCode::PaperMapper.new.find(id)
+            paperswithcode_paper = Repository::For.klass(Entity::Paper).find_origin_id(id)
             view 'paper', locals: { paper: paperswithcode_paper }
           end
         end

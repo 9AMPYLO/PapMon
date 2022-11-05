@@ -6,14 +6,6 @@
         span.paper.title
           = paper.title
     .div-small
-    .row
-      .col-lg-1.col-md-2.col-sm-2
-        span.paper.attribute Authors:
-      .col-lg-11.col-md-10.col-sm-6
-        span.paper.detail
-          - paper.authors.each do |author|
-            = author
-            br
     .row.top-buffer
       .col-lg-1.col-md-2.col-sm-2
         span.paper.attribute Publish:
@@ -40,5 +32,5 @@
       .col-lg-11.col-md-10.col-sm-6
         span.paper.detail
           - paper.repositories.each do |repo|
-            = repo.repo_url
+            = repo.url
             br

@@ -29,7 +29,8 @@ module PapMon
 
       def build_entity
         PapMon::Entity::Paper.new(
-          id:,
+          id: nil,
+          origin_id:,
           arxiv_id:,
           url_abs:,
           title:,
@@ -41,7 +42,7 @@ module PapMon
         )
       end
 
-      def id
+      def origin_id
         @data['id']
       end
 

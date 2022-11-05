@@ -27,14 +27,14 @@ module PapMon
 
         def build_entity
           PapMon::Entity::Dataset.new(
-            id:,
+            id: nil,
+            origin_id:,
             name:,
-            full_name:,
             url:
           )
         end
 
-        def id
+        def origin_id
           @data['id']
         end
 
@@ -42,9 +42,9 @@ module PapMon
           @data['name']
         end
 
-        def full_name
-          @data['full_name']
-        end
+        # def full_name
+        #   @data['full_name']
+        # end
 
         def url
           @data['url']

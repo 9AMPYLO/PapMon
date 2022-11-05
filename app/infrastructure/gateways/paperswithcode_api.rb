@@ -9,15 +9,15 @@ module PapMon
     API_PROJECT_ROOT = 'https://paperswithcode.com/api/v1/'
 
     def paper_data(papername)
-      paper_data = Request.new.paper(papername).parse
+      Request.new.paper(papername).parse
     end
 
     def datasets_data(paper_id)
-      datasets_data = Request.new.datasets(paper_id).parse
+      Request.new.datasets(paper_id).parse
     end
 
     def repositories_data(paper_id)
-      repositories_data = Request.new.repositories(paper_id).parse
+      Request.new.repositories(paper_id).parse
     end
 
     # request class
@@ -31,17 +31,17 @@ module PapMon
 
       def paper(papername)
         paper_url = API_PROJECT_ROOT + ['papers', papername, ''].join('/')
-        paper_response = get(paper_url)
+        get(paper_url)
       end
 
       def datasets(paper_id)
         datasets_url = API_PROJECT_ROOT + ['papers', paper_id, 'datasets', ''].join('/')
-        datasets_data = get(datasets_url)
+        get(datasets_url)
       end
 
       def repositories(paper_id)
         repo_url = API_PROJECT_ROOT + ['papers', paper_id, 'repositories', ''].join('/')
-        repo_data = get(repo_url)
+        get(repo_url)
       end
     end
 

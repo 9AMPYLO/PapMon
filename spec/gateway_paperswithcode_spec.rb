@@ -1,32 +1,24 @@
 # frozen_string_literal: true
 
 require_relative 'spec_helper'
+require_relative 'helpers/vcr_helper'
 
 describe 'Test Paperswithcode API Library' do
-  VCR.configure do |c|
-    c.cassette_library_dir = CASSETTES_FOLDER
-    c.hook_into :webmock
-  end
-
   before do
-    VCR.insert_cassette CASSETTE_FILE,
-                        record: :new_episodes,
-                        match_requests_on: %i[method uri headers]
+    VcrHelper.configure_vcr_for_paperswithcode
   end
 
   after do
-    VCR.eject_cassette
+    VcrHelper.eject_vcr
   end
 
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
-      # paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
-      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
-      _(paper.id).must_equal CORRECT['id']
+      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
+      _(paper.origin_id).must_equal CORRECT['id']
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
       _(paper.title).must_equal CORRECT['title']
-      _(paper.authors).must_equal CORRECT['authors']
       _(paper.published).must_equal CORRECT['published']
       _(paper.proceeding).must_equal CORRECT['proceeding']
     end
@@ -40,8 +32,7 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Dataset information' do
     before do
-      # @paper = PapMon::PapersWithCodeApi.new.paper(PAPERNAME)
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
     end
 
     it 'HAPPY: should recognize datasets' do
@@ -65,7 +56,7 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'Repository information' do
     before do
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERNAME)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
     end
 
     it 'HAPPY: should recognize repositories' do
@@ -81,9 +72,9 @@ describe 'Test Paperswithcode API Library' do
     it 'HAPPY: should provide correct repository information' do
       repos = @paper.repositories
       _(repos.count).must_equal CORRECT['repositories'].count
-      repos_names = repos.map(&:repo_name)
-      correct_repos_names = CORRECT['repositories'].map { |d| d['name'] }
-      _(repos_names).must_equal correct_repos_names
+      repos_urls = repos.map(&:url)
+      correct_repos_urls = CORRECT['repositories'].map { |d| d['url'] }
+      _(repos_urls).must_equal correct_repos_urls
     end
   end
 end
