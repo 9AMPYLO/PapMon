@@ -15,8 +15,7 @@ describe 'Test Paperswithcode API Library' do
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
       paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
-      puts paper
-      _(paper.id).must_equal CORRECT['id']
+      _(paper.origin_id).must_equal CORRECT['id']
       _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
       _(paper.url_abs).must_equal CORRECT['url_abs']
       _(paper.title).must_equal CORRECT['title']
@@ -74,9 +73,9 @@ describe 'Test Paperswithcode API Library' do
     it 'HAPPY: should provide correct repository information' do
       repos = @paper.repositories
       _(repos.count).must_equal CORRECT['repositories'].count
-      repos_names = repos.map(&:repo_name)
-      correct_repos_names = CORRECT['repositories'].map { |d| d['name'] }
-      _(repos_names).must_equal correct_repos_names
+      repos_urls = repos.map(&:repo_url)
+      correct_repos_urls = CORRECT['repositories'].map { |d| d['url'] }
+      _(repos_urls).must_equal correct_repos_urls
     end
   end
 end

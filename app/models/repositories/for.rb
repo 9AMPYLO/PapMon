@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'papers'
 require_relative 'datasets'
 require_relative 'repositories'
-
+require_relative 'papers'
 module PapMon
   module Repository
     # Finds the right repository for an entity object or class
