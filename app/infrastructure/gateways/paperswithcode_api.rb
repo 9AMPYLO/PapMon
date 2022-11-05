@@ -58,7 +58,7 @@ module PapMon
       end
 
       def successful?
-        HTTP_ERROR.keys.include?(@http_response.code)
+        HTTP_ERROR.keys.include?(@http_response.code) ? false : true
       end
 
       def error
