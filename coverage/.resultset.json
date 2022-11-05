@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/jerry940100/PapMon/require_app.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/require_app.rb": {
         "lines": [
           null,
           null,
@@ -16,7 +16,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/config/environment.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -52,7 +52,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/infrastructure/database/dataset_orm.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/infrastructure/database/dataset_orm.rb": {
         "lines": [
           null,
           null,
@@ -73,7 +73,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/infrastructure/database/paper_orm.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/infrastructure/database/paper_orm.rb": {
         "lines": [
           null,
           null,
@@ -94,7 +94,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/infrastructure/database/repository_orm.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/infrastructure/database/repository_orm.rb": {
         "lines": [
           null,
           null,
@@ -114,7 +114,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/infrastructure/gateways/paperswithcode_api.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/infrastructure/gateways/paperswithcode_api.rb": {
         "lines": [
           null,
           null,
@@ -141,15 +141,9 @@
           null,
           1,
           1,
-<<<<<<< HEAD
-          17,
-          17,
-          17,
-=======
           25,
           25,
           25,
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           null,
@@ -177,21 +171,12 @@
           null,
           null,
           1,
-<<<<<<< HEAD
-          17,
-          17,
-          null,
-          null,
-          1,
-          17,
-=======
           25,
           25,
           null,
           null,
           1,
           25,
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           1,
@@ -202,7 +187,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/entities/dataset.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/entities/dataset.rb": {
         "lines": [
           null,
           null,
@@ -225,7 +210,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/entities/paper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/entities/paper.rb": {
         "lines": [
           null,
           null,
@@ -261,7 +246,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/entities/repository.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/entities/repository.rb": {
         "lines": [
           null,
           null,
@@ -283,7 +268,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/mappers/dataset_mapper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/mappers/dataset_mapper.rb": {
         "lines": [
           null,
           null,
@@ -342,7 +327,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/mappers/paper_mapper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/mappers/paper_mapper.rb": {
         "lines": [
           null,
           null,
@@ -375,10 +360,7 @@
           null,
           1,
           8,
-<<<<<<< HEAD
-=======
           null,
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           null,
@@ -431,7 +413,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/mappers/repository_mapper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/mappers/repository_mapper.rb": {
         "lines": [
           null,
           null,
@@ -462,10 +444,6 @@
           null,
           1,
           8,
-<<<<<<< HEAD
-          null,
-=======
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           null,
@@ -473,16 +451,6 @@
           null,
           1,
           8,
-<<<<<<< HEAD
-          null,
-          null,
-          1,
-          8,
-          null,
-          null,
-          1,
-          8,
-=======
           null,
           null,
           null,
@@ -491,7 +459,6 @@
           null,
           null,
           null,
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           null,
@@ -499,7 +466,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/repositories/datasets.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/repositories/datasets.rb": {
         "lines": [
           null,
           null,
@@ -546,7 +513,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/repositories/for.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/repositories/for.rb": {
         "lines": [
           null,
           null,
@@ -575,7 +542,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/repositories/repositories.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/repositories/repositories.rb": {
         "lines": [
           null,
           null,
@@ -617,7 +584,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/models/repositories/papers.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/models/repositories/papers.rb": {
         "lines": [
           null,
           null,
@@ -688,7 +655,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/app/controllers/app.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/app/controllers/app.rb": {
         "lines": [
           null,
           null,
@@ -739,7 +706,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/spec/helpers/vcr_helper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/spec/helpers/vcr_helper.rb": {
         "lines": [
           null,
           null,
@@ -772,7 +739,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/spec/helpers/database_helper.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/spec/helpers/database_helper.rb": {
         "lines": [
           null,
           null,
@@ -787,7 +754,7 @@
           null
         ]
       },
-      "/home/jerry940100/PapMon/spec/gateway_paperswithcode_spec.rb": {
+      "/Users/peter0512lee/Dev/SOA_2022/PapMon/spec/gateway_paperswithcode_spec.rb": {
         "lines": [
           null,
           null,
@@ -806,16 +773,6 @@
           1,
           1,
           1,
-<<<<<<< HEAD
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-=======
           1,
           1,
           1,
@@ -823,7 +780,6 @@
           1,
           1,
           1,
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
           null,
           null,
           1,
@@ -884,10 +840,6 @@
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1667634167
-=======
-    "timestamp": 1667636251
->>>>>>> 5dfbf42380455c89e6f0dee036d004677baf8233
+    "timestamp": 1667636856
   }
 }
