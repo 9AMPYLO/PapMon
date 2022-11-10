@@ -29,11 +29,16 @@ module PapMon
             routing.halt 400, 'Missing paper id' unless id
             # routing.redirect "paper/#{id}"
 
-            # Get paper from PapersWithCode
-            paperswithcode_paper = PapersWithCode::PaperMapper.new.find(id)
+            # Get newest 10 paper via f
+            arxiv_paper = Arxiv::ArxivMapper.new.newest10
 
-            # Add paper to database
-            Repository::For.entity(paperswithcode_paper).create(paperswithcode_paper)
+            arxiv_paper.each do |each_paper|
+              # Get paper from PapersWithCode
+              paperswithcode_paper = PapersWithCode::PaperMapper.new.find(each_paper)
+
+              # Add paper to database
+              Repository::For.entity(paperswithcode_paper).create(paperswithcode_paper)
+            end
 
             # Redirect viewer to paper page
             routing.redirect "paper/#{id}"
