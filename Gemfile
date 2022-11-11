@@ -11,6 +11,9 @@ gem 'puma', '~> 6'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
 
+#Parse
+gem 'activesupport'
+
 # Validation
 gem 'dry-struct', '~> 1'
 gem 'dry-types', '~> 1'

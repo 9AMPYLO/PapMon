@@ -9,6 +9,7 @@ Sequel.migration do
 
       String :origin_id, unique: true
       String :arxiv_id, unique: true
+      String :primary_category
       String :url_abs
       String :title
       String :published

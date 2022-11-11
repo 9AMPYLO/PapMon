@@ -8,8 +8,8 @@ module PapMon
   class PapersWithCodeApi
     API_PROJECT_ROOT = 'https://paperswithcode.com/api/v1/'
 
-    def paper_data(papername)
-      Request.new.paper(papername).parse
+    def paper_data(arxiv_id)
+      Request.new.paper(arxiv_id).parse
     end
 
     def datasets_data(paper_id)
@@ -29,8 +29,8 @@ module PapMon
         end
       end
 
-      def paper(papername)
-        paper_url = API_PROJECT_ROOT + ['papers', papername, ''].join('/')
+      def paper(arxiv_id)
+        paper_url = API_PROJECT_ROOT + ["papers", "?arxiv_id=#{arxiv_id}"].join('/')
         get(paper_url)
       end
 

@@ -12,18 +12,18 @@ module PapMon
       parse(Request.new.arxiv_paper)
     end
 
-    def self.parse(xml)
+    def parse(xml)
       arxiv_result = []
 
       xml_hash = Hash.from_xml(xml)
       xml_hash = xml_hash['feed']['entry']
       xml_hash.each do |paper_element|
         arxiv_paper = {}
-        arxiv_paper['id'] = paper_element['id'][21..30]
-        arxiv_paper['primary_category'] = paper_element['primary_category']['term']
+        arxiv_paper["arxiv_id"] = paper_element['id'][21..30]
+        arxiv_paper["primary_category"] = paper_element['primary_category']['term']
         arxiv_result.append(arxiv_paper)
       end
-      arxiv_result.to_yaml
+      arxiv_result
     end
 
     # request class

@@ -11,11 +11,13 @@ module PapMon
 
       def newest10
         data = @gateway.arxiv_paper
-        build_entity(data)
+        data.map do |paper|
+          build_entity(paper)
+        end
       end
 
-      def build_entity(data)
-        DataMapper.new(data).build_entity
+      def build_entity(paper)
+        DataMapper.new(paper).build_entity
       end
     end
 
@@ -26,7 +28,7 @@ module PapMon
       end
 
       def build_entity
-        PapMon::Entity::Paper.new(
+        PapMon::Entity::Arxiv.new(
           arxiv_id:,
           primary_category:
         )

@@ -16,6 +16,7 @@ module PapMon
       attribute :id, Integer.optional
       attribute :origin_id, String.optional
       attribute :arxiv_id, String.optional
+      attribute :primary_category, String.optional
       attribute :url_abs, String.optional
       attribute :title, String.optional
       # attribute :authors, Array.of(String).optional

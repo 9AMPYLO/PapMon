@@ -10,7 +10,7 @@ module PapMon
                    left_key: :dataset_id, right_key: :paper_id
       plugin :timestamps, update_on_create: true
       def self.find_or_create(dataset_info)
-        first(id: dataset_info[:id]) || create(dataset_info)
+        first(origin_id: dataset_info[:origin_id]) || create(dataset_info)
       end
     end
   end
