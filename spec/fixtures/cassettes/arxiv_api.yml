@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 11 Nov 2022 17:49:28 GMT
+      - Fri, 11 Nov 2022 17:48:34 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -67,13 +67,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2l7M5af3CGafyD%2Fpe6903%2BVOQaagE6otO7uu4CITLvAWcig6PcqU8nO22PbjuoWpOJY7BWtjXzNZRhg6NJFALTrnMq8nsqzm04VAvVYp59agDOgYoBDTBeMz81C0RuFiU%2BO1GUMNbZy5AVRGBUa7SA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WktVSStdnrqoTw9sgEw94StOmW3EdbdP1PYb3wjoxsrup9hFskHiT6hYBDcwt2dmZXpXy9QBQzBlCRZReOWH4B9hD7i7okDcE%2FiqQecOkb5MX00KW3%2BoLPq8L6KA%2Bw%2B0PWWFUQ7GN0nydtYwSyIXTQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7688dd5e6941045f-HKG
+      - 7688dc07afb40504-HKG
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"id":"unifying-flow-stereo-and-depth-estimation","arxiv_id":"2211.05783","nips_id":null,"url_abs":"https://arxiv.org/abs/2211.05783v1","url_pdf":"https://arxiv.org/pdf/2211.05783v1.pdf","title":"Unifying
@@ -95,7 +95,7 @@ http_interactions:
         popular flow, stereo and depth datasets, while being simpler and more efficient
         in terms of model design and inference speed.","authors":["Andreas Geiger","DaCheng
         Tao","Fisher Yu","Hamid Rezatofighi","Jianfei Cai","Jing Zhang","Haofei Xu"],"published":"2022-11-10","conference":null,"conference_url_abs":null,"conference_url_pdf":null,"proceeding":null}]}'
-  recorded_at: Fri, 11 Nov 2022 17:49:28 GMT
+  recorded_at: Fri, 11 Nov 2022 17:48:34 GMT
 - request:
     method: get
     uri: https://paperswithcode.com/api/v1/papers/unifying-flow-stereo-and-depth-estimation/repositories/
@@ -117,7 +117,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 11 Nov 2022 17:49:29 GMT
+      - Fri, 11 Nov 2022 17:48:35 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -163,18 +163,18 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iQ6w4zUH%2BjAfxy2yf%2BredMCKrJrr9oM21mjJzl2PRjSP9LKMDSwHCyOa5klSXIyuQ8JFq6VqsJEmAy%2BrN8Du9bH4kLXIceDoNo88clDaRqAYP9r0K9VUu59Ok0dsRoRf8P5tZ6LixoX4S4YzY%2Fyymw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9YXYaZNEgfOSKFtWQM0qNF2e0LYHWrxB%2FVOPKnW8KNpT9krR42yln1craVh4Y50zPmiKy8LE3aUc%2Bs3af%2B1hGHFXz%2Fq42WJWRJhyERT9CnRviRjxIAMYZ813eLs5IiHQ0VCX%2FPsU6PF7UI0UTN072w%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7688dd618efd0eb6-HKG
+      - 7688dc0aab161092-HKG
     body:
       encoding: UTF-8
       string: '{"count":1,"next":null,"previous":null,"results":[{"url":"https://github.com/autonomousvision/unimatch","owner":"autonomousvision","name":"unimatch","description":"Unifying
         Flow, Stereo and Depth Estimation","stars":52,"framework":"none","is_official":true}]}'
-  recorded_at: Fri, 11 Nov 2022 17:49:29 GMT
+  recorded_at: Fri, 11 Nov 2022 17:48:35 GMT
 - request:
     method: get
     uri: https://paperswithcode.com/api/v1/papers/unifying-flow-stereo-and-depth-estimation/datasets/
@@ -196,7 +196,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 11 Nov 2022 17:49:29 GMT
+      - Fri, 11 Nov 2022 17:48:36 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -242,19 +242,19 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=t99xXTiNsN5ZURchdb0vH%2Fwo5KdynIb2jEus0RfFEx9nrmOod1gl9iOYxxUy7XQwbfSsUwifJtgyxH%2BaI0FtnTTWpOKmEQt5AhVx6PLx2PbPh59fP2APjZ%2FuoqMqMFHzqN3ZL7xAO6g0wcZGbV07Sg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WdiZUctI%2FS60xkaOb8XiaXNZ2IYfoj8wsFc4ywo6tzaHBYt7fUrc2%2BTrl8DZSoph50Ua%2FMN6%2Fu1hnHx8ju9cwZ8T7%2BmNLrqm4nGUfnib4EZ0fBv7WknwQ4zYMe1aCv9HZxYbJD67iX3eeXjDBCO9dg%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7688dd649a2604e3-HKG
+      - 7688dc10ac1f0987-HKG
     body:
       encoding: UTF-8
       string: '{"count":10,"next":null,"previous":null,"results":[{"id":"middlebury","name":"Middlebury","full_name":"Middlebury
         Stereo","url":"https://vision.middlebury.edu/stereo/data/"},{"id":"flyingthings3d","name":"FlyingThings3D","full_name":"","url":"https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html"},{"id":"kitti","name":"KITTI","full_name":"","url":"http://www.cvlibs.net/datasets/kitti/"},{"id":"tartanair","name":"TartanAir","full_name":"","url":"http://theairlab.org/tartanair-dataset/"},{"id":"sun3d","name":"SUN3D","full_name":"SUN3D","url":"http://sun3d.cs.princeton.edu/"},{"id":"scannet","name":"ScanNet","full_name":"","url":"http://www.scan-net.org/"},{"id":"flyingchairs","name":"FlyingChairs","full_name":"","url":"https://lmb.informatik.uni-freiburg.de/resources/datasets/FlyingChairs.en.html"},{"id":"virtual-kitti-2","name":"Virtual
         KITTI 2","full_name":"","url":"https://europe.naverlabs.com/Research/Computer-Vision/Proxy-Virtual-Worlds"},{"id":"eth3d","name":"ETH3D","full_name":"","url":"https://www.eth3d.net/"},{"id":"argoverse","name":"Argoverse","full_name":"","url":"https://www.argoverse.org/data.html"}]}'
-  recorded_at: Fri, 11 Nov 2022 17:49:29 GMT
+  recorded_at: Fri, 11 Nov 2022 17:48:36 GMT
 - request:
     method: get
     uri: http://export.arxiv.org/api/query?search_query=cat:cs.CV%20OR%20cat:cs.AI%20OR%20cat:cs.LG%20OR%20cat:cs.CL%20OR%20cat:cs.NE%20OR%20cat:stat.ML%20&sortBy=lastUpdatedDate&sortOrder=descending
@@ -276,7 +276,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 11 Nov 2022 17:54:40 GMT
+      - Fri, 11 Nov 2022 17:48:36 GMT
       Server:
       - Apache
       Access-Control-Allow-Origin:
@@ -810,5 +810,5 @@ http_interactions:
             <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
           </entry>
         </feed>
-  recorded_at: Fri, 11 Nov 2022 17:54:41 GMT
+  recorded_at: Fri, 11 Nov 2022 17:48:37 GMT
 recorded_with: VCR 6.1.0

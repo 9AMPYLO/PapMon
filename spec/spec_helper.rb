@@ -14,8 +14,10 @@ require 'webmock'
 require_relative '../require_app'
 require_app
 
-PAPERID = 'be-your-own-teacher-improve-the-performance'
-CORRECT = YAML.safe_load(File.read('spec/fixtures/results.yml'))
+system('ruby spec/helpers/get_latest_paper.rb')
+ARXIV_CORRECT = YAML.safe_load(File.read('spec/fixtures/arxiv.yml'))
+PWC_CORRECT = YAML.safe_load(File.read('spec/fixtures/paperswithcode.yml'))
+LATEST_ARXIV = PapMon::Arxiv::ArxivMapper.new.newest10[0]
 
 # CASSETTES_FOLDER = 'spec/fixtures/cassettes'
 # CASSETTE_FILE = 'paperswithcode_api'
