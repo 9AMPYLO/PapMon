@@ -55,7 +55,7 @@ module PapMon
       def primary_category
         @data[:primary_category]
       end
-      
+
       def url_abs
         @data['url_abs']
       end
