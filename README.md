@@ -1,33 +1,36 @@
 # PapMon
 
-Based on ther **trends** and **keywords** to recommend the latest papers, open source code, and released datasets in the field of Deep Learning, and then notify on LINE or Telegram.
+PapMon is a web app that will recommend the latest papers, related source code and datasets in the field of Computer Science.
 
 ## Product Language
 
 * Paper -> paper
-
 * Datasets -> datasets
-
 * Repository -> repository
 
 ## Overview
 
 * Get the latest and hottest papers daily.
-
 * Provide a search function to look through existing works.
 
 ## Short-term Usability Goals
 
-* Get information of papers from paperswithcode API by paper name.
-
-* Get the latest papers from KOLs (known scholars) by twitter hashtags.
+* Get the latest papers from Arxiv API daily.
+* Get the information of paper from PapersWithCode API.
 
 ## Long-term Goals
 
 * Notifications on LINE or Telegram daily.
+* Implement the search function to look through existing works.
 
-* Customize **keywords** or **KOLs** to get personal recommended papers.
+## Database Tables
 
-## ER Diagram
+### Entities
+
+* Paper: the information of a paper.
+* Dataset: the information of a dataset related to a paper.
+* Repository: the information of a repository related to a paper.
+
+### Entity-Relationship Diagram
 
 ![Imgur](https://imgur.com/kNOhKZ0.png)
