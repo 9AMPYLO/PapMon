@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://paperswithcode.com/api/v1/papers/be-your-own-teacher-improve-the-performance/
+    uri: https://paperswithcode.com/api/v1/papers/?arxiv_id=2211.05783
     body:
       encoding: UTF-8
       string: ''
@@ -21,11 +21,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Oct 2022 13:03:47 GMT
+      - Fri, 11 Nov 2022 17:49:28 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2326'
+      - '1759'
       Connection:
       - close
       Vary:
@@ -67,120 +67,38 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yoqANMutFxmcBjlHt2tKECKnhUg6PRJSIgZxSIiM%2FdQGzf7IzrAJSGJDwtCf1TD8hLVJ2pDNOBQglxQmtCDphQcN3lcaWdZEsMH3esFJmk%2B9mG%2BYCJeDd4AJSwHbrimSWHTPNA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2l7M5af3CGafyD%2Fpe6903%2BVOQaagE6otO7uu4CITLvAWcig6PcqU8nO22PbjuoWpOJY7BWtjXzNZRhg6NJFALTrnMq8nsqzm04VAvVYp59agDOgYoBDTBeMz81C0RuFiU%2BO1GUMNbZy5AVRGBUa7SA%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 75c179df6b933420-NRT
+      - 7688dd5e6941045f-HKG
     body:
       encoding: UTF-8
-      string: '{"id":"be-your-own-teacher-improve-the-performance","arxiv_id":"1905.08094","nips_id":null,"url_abs":"https://arxiv.org/abs/1905.08094v1","url_pdf":"https://arxiv.org/pdf/1905.08094v1.pdf","title":"Be
-        Your Own Teacher: Improve the Performance of Convolutional Neural Networks
-        via Self Distillation","abstract":"Convolutional neural networks have been
-        widely deployed in various application scenarios. In order to extend the applications''
-        boundaries to some accuracy-crucial domains, researchers have been investigating
-        approaches to boost accuracy through either deeper or wider network structures,
-        which brings with them the exponential increment of the computational and
-        storage cost, delaying the responding time. In this paper, we propose a general
-        training framework named self distillation, which notably enhances the performance
-        (accuracy) of convolutional neural networks through shrinking the size of
-        the network rather than aggrandizing it. Different from traditional knowledge
-        distillation - a knowledge transformation methodology among networks, which
-        forces student neural networks to approximate the softmax layer outputs of
-        pre-trained teacher neural networks, the proposed self distillation framework
-        distills knowledge within network itself. The networks are firstly divided
-        into several sections. Then the knowledge in the deeper portion of the networks
-        is squeezed into the shallow ones. Experiments further prove the generalization
-        of the proposed self distillation framework: enhancement of accuracy at average
-        level is 2.65%, varying from 0.61% in ResNeXt as minimum to 4.07% in VGG19
-        as maximum. In addition, it can also provide flexibility of depth-wise scalable
-        inference on resource-limited edge devices.Our codes will be released on github
-        soon.","authors":["Kaisheng Ma","Jiebo Song","Linfeng Zhang","Jingwei Chen","Chenglong
-        Bao","Anni Gao"],"published":"2019-05-17","conference":"be-your-own-teacher-improve-the-performance-1","conference_url_abs":"http://openaccess.thecvf.com/content_ICCV_2019/html/Zhang_Be_Your_Own_Teacher_Improve_the_Performance_of_Convolutional_Neural_ICCV_2019_paper.html","conference_url_pdf":"http://openaccess.thecvf.com/content_ICCV_2019/papers/Zhang_Be_Your_Own_Teacher_Improve_the_Performance_of_Convolutional_Neural_ICCV_2019_paper.pdf","proceeding":"iccv-2019-10"}'
-  recorded_at: Tue, 18 Oct 2022 13:03:47 GMT
+      string: '{"count":1,"next":null,"previous":null,"results":[{"id":"unifying-flow-stereo-and-depth-estimation","arxiv_id":"2211.05783","nips_id":null,"url_abs":"https://arxiv.org/abs/2211.05783v1","url_pdf":"https://arxiv.org/pdf/2211.05783v1.pdf","title":"Unifying
+        Flow, Stereo and Depth Estimation","abstract":"We present a unified formulation
+        and model for three motion and 3D perception tasks: optical flow, rectified
+        stereo matching and unrectified stereo depth estimation from posed images.
+        Unlike previous specialized architectures for each specific task, we formulate
+        all three tasks as a unified dense correspondence matching problem, which
+        can be solved with a single model by directly comparing feature similarities.
+        Such a formulation calls for discriminative feature representations, which
+        we achieve using a Transformer, in particular the cross-attention mechanism.
+        We demonstrate that cross-attention enables integration of knowledge from
+        another image via cross-view interactions, which greatly improves the quality
+        of the extracted features. Our unified model naturally enables cross-task
+        transfer since the model architecture and parameters are shared across tasks.
+        We outperform RAFT with our unified model on the challenging Sintel dataset,
+        and our final model that uses a few additional task-specific refinement steps
+        outperforms or compares favorably to recent state-of-the-art methods on 10
+        popular flow, stereo and depth datasets, while being simpler and more efficient
+        in terms of model design and inference speed.","authors":["Andreas Geiger","DaCheng
+        Tao","Fisher Yu","Hamid Rezatofighi","Jianfei Cai","Jing Zhang","Haofei Xu"],"published":"2022-11-10","conference":null,"conference_url_abs":null,"conference_url_pdf":null,"proceeding":null}]}'
+  recorded_at: Fri, 11 Nov 2022 17:49:28 GMT
 - request:
     method: get
-    uri: https://paperswithcode.com/api/v1/papers/be-your-own-teacher/
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - paperswithcode.com
-      User-Agent:
-      - http.rb/5.1.0
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Tue, 18 Oct 2022 13:03:48 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '23'
-      Connection:
-      - close
-      Vary:
-      - Accept, Cookie
-      Allow:
-      - GET, HEAD, OPTIONS
-      Permissions-Policy:
-      - accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), display-capture=(),
-        document-domain=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(),
-        interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
-      Content-Security-Policy:
-      - 'img-src * data: blob: ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
-        https://fonts.googleapis.com https://unpkg.com https://cdnjs.cloudflare.com
-        https://maxcdn.bootstrapcdn.com https://code.jquery.com https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
-        http://localhost:3000 http://localhost:4000; script-src ''self'' blob: ''unsafe-inline''
-        ''unsafe-eval'' https://www.googletagmanager.com https://www.google-analytics.com
-        https://unpkg.com https://ajax.googleapis.com https://browser.sentry-cdn.com
-        https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://code.jquery.com
-        https://cdn.jsdelivr.net https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000;
-        manifest-src https://production-assets.paperswithcode.com; frame-src https://www.youtube.com/;
-        default-src ''self''; font-src * data: blob: ''unsafe-inline''; connect-src
-        ''self'' https://unpkg.com https://www.google-analytics.com https://sentry.io
-        https://o241170.ingest.sentry.io https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000
-        ws://localhost:3000 ws://localhost:4000; media-src * data: blob: ''unsafe-inline'';
-        report-uri https://o241170.ingest.sentry.io/api/5629308/security/?sentry_key=6284059d22664211881c89b4c409c619'
-      Referrer-Policy:
-      - no-referrer-when-downgrade
-      X-Frame-Options:
-      - DENY
-      Strict-Transport-Security:
-      - max-age=10368000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VwIAWNCsmqrwkPxNBHn7jRJIUtiU8DxRgRE82eLjnvMfyafZ4qkZ%2BVe2k4TSCIKnlSjj%2BQBX97u0%2F68CHiKe6tnqG1kUZVDBJ%2FKGH28oo0tWAzvV1fj%2FLZ7zKxeYw97YKilNLg%3D%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 75c179e2d93dafca-NRT
-    body:
-      encoding: UTF-8
-      string: '{"detail":"Not found."}'
-  recorded_at: Tue, 18 Oct 2022 13:03:48 GMT
-- request:
-    method: get
-    uri: https://paperswithcode.com/api/v1/papers/be-your-own-teacher-improve-the-performance/repositories/
+    uri: https://paperswithcode.com/api/v1/papers/unifying-flow-stereo-and-depth-estimation/repositories/
     body:
       encoding: UTF-8
       string: ''
@@ -199,11 +117,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Oct 2022 13:03:49 GMT
+      - Fri, 11 Nov 2022 17:49:29 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '418'
+      - '259'
       Connection:
       - close
       Vary:
@@ -245,22 +163,21 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=akfAXxYjkk%2BxM7OB33%2FRVahAIzIxInc2SA8gnPNjwyZS2MMp7ejF3%2FhhzoDjVB%2BVvt0X2we3nvSKORHY7tqn%2FP8JbMBmXwM%2BSgl9VcsEPz3zsxjc8xnuorKlPY%2BvYZUdD3KQWA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iQ6w4zUH%2BjAfxy2yf%2BredMCKrJrr9oM21mjJzl2PRjSP9LKMDSwHCyOa5klSXIyuQ8JFq6VqsJEmAy%2BrN8Du9bH4kLXIceDoNo88clDaRqAYP9r0K9VUu59Ok0dsRoRf8P5tZ6LixoX4S4YzY%2Fyymw%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 75c179e81833f651-NRT
+      - 7688dd618efd0eb6-HKG
     body:
       encoding: UTF-8
-      string: '{"count":1,"next":null,"previous":null,"results":[{"url":"https://github.com/luanyunteng/pytorch-be-your-own-teacher","owner":"luanyunteng","name":"pytorch-be-your-own-teacher","description":"A
-        pytorch implementation of paper ''Be Your Own Teacher: Improve the Performance
-        of Convolutional Neural Networks via Self Distillation'', https://arxiv.org/abs/1905.08094","stars":94,"framework":"pytorch","is_official":false}]}'
-  recorded_at: Tue, 18 Oct 2022 13:03:49 GMT
+      string: '{"count":1,"next":null,"previous":null,"results":[{"url":"https://github.com/autonomousvision/unimatch","owner":"autonomousvision","name":"unimatch","description":"Unifying
+        Flow, Stereo and Depth Estimation","stars":52,"framework":"none","is_official":true}]}'
+  recorded_at: Fri, 11 Nov 2022 17:49:29 GMT
 - request:
     method: get
-    uri: https://paperswithcode.com/api/v1/papers/be-your-own-teacher-improve-the-performance/datasets/
+    uri: https://paperswithcode.com/api/v1/papers/unifying-flow-stereo-and-depth-estimation/datasets/
     body:
       encoding: UTF-8
       string: ''
@@ -279,11 +196,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 18 Oct 2022 13:03:50 GMT
+      - Fri, 11 Nov 2022 17:49:29 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '247'
+      - '1160'
       Connection:
       - close
       Vary:
@@ -325,20 +242,22 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Hohw5ouYAInnerfzFzuSCuf5WMSaIV7%2F3xqCNHanN4wmQQUF6i5QFGkVjIwBg2uFSUOQ2G8O4jhW%2B8E0pj8yZUQa1MInwd3GGD1QoYH0%2BNLeIu8yVME5%2B2GWeKVEvvba37sh1A%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=t99xXTiNsN5ZURchdb0vH%2Fwo5KdynIb2jEus0RfFEx9nrmOod1gl9iOYxxUy7XQwbfSsUwifJtgyxH%2BaI0FtnTTWpOKmEQt5AhVx6PLx2PbPh59fP2APjZ%2FuoqMqMFHzqN3ZL7xAO6g0wcZGbV07Sg%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 75c179ed4b4cf63d-NRT
+      - 7688dd649a2604e3-HKG
     body:
       encoding: UTF-8
-      string: '{"count":2,"next":null,"previous":null,"results":[{"id":"imagenet","name":"ImageNet","full_name":"","url":"https://image-net.org/index.php"},{"id":"cifar-100","name":"CIFAR-100","full_name":"","url":"https://www.cs.toronto.edu/~kriz/cifar.html"}]}'
-  recorded_at: Tue, 18 Oct 2022 13:03:50 GMT
+      string: '{"count":10,"next":null,"previous":null,"results":[{"id":"middlebury","name":"Middlebury","full_name":"Middlebury
+        Stereo","url":"https://vision.middlebury.edu/stereo/data/"},{"id":"flyingthings3d","name":"FlyingThings3D","full_name":"","url":"https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html"},{"id":"kitti","name":"KITTI","full_name":"","url":"http://www.cvlibs.net/datasets/kitti/"},{"id":"tartanair","name":"TartanAir","full_name":"","url":"http://theairlab.org/tartanair-dataset/"},{"id":"sun3d","name":"SUN3D","full_name":"SUN3D","url":"http://sun3d.cs.princeton.edu/"},{"id":"scannet","name":"ScanNet","full_name":"","url":"http://www.scan-net.org/"},{"id":"flyingchairs","name":"FlyingChairs","full_name":"","url":"https://lmb.informatik.uni-freiburg.de/resources/datasets/FlyingChairs.en.html"},{"id":"virtual-kitti-2","name":"Virtual
+        KITTI 2","full_name":"","url":"https://europe.naverlabs.com/Research/Computer-Vision/Proxy-Virtual-Worlds"},{"id":"eth3d","name":"ETH3D","full_name":"","url":"https://www.eth3d.net/"},{"id":"argoverse","name":"Argoverse","full_name":"","url":"https://www.argoverse.org/data.html"}]}'
+  recorded_at: Fri, 11 Nov 2022 17:49:29 GMT
 - request:
     method: get
-    uri: https://paperswithcode.com/api/v1/papers//repositories/
+    uri: http://export.arxiv.org/api/query?search_query=cat:cs.CV%20OR%20cat:cs.AI%20OR%20cat:cs.LG%20OR%20cat:cs.CL%20OR%20cat:cs.NE%20OR%20cat:stat.ML%20&sortBy=lastUpdatedDate&sortOrder=descending
     body:
       encoding: UTF-8
       string: ''
@@ -348,76 +267,548 @@ http_interactions:
       Connection:
       - close
       Host:
-      - paperswithcode.com
+      - export.arxiv.org
       User-Agent:
       - http.rb/5.1.0
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Date:
-      - Sat, 05 Nov 2022 07:23:34 GMT
-      Content-Type:
-      - text/html
+      - Fri, 11 Nov 2022 17:54:40 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding,User-Agent
+      Connection:
+      - close
       Transfer-Encoding:
       - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), display-capture=(),
-        document-domain=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(),
-        interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
-      Content-Security-Policy:
-      - 'img-src * data: blob: ''unsafe-inline''; style-src ''self'' ''unsafe-inline''
-        https://fonts.googleapis.com https://unpkg.com https://cdnjs.cloudflare.com
-        https://maxcdn.bootstrapcdn.com https://code.jquery.com https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
-        http://localhost:3000 http://localhost:4000; script-src ''self'' blob: ''unsafe-inline''
-        ''unsafe-eval'' https://www.googletagmanager.com https://www.google-analytics.com
-        https://unpkg.com https://ajax.googleapis.com https://browser.sentry-cdn.com
-        https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://code.jquery.com
-        https://cdn.jsdelivr.net https://production-assets.paperswithcode.com https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000;
-        manifest-src https://production-assets.paperswithcode.com; frame-src https://www.youtube.com/;
-        default-src ''self''; font-src * data: blob: ''unsafe-inline''; connect-src
-        ''self'' https://unpkg.com https://www.google-analytics.com https://sentry.io
-        https://o241170.ingest.sentry.io https://production-assets.paperswithcode.com
-        https://production-assets.paperswithcode.com http://localhost:3000 http://localhost:4000
-        ws://localhost:3000 ws://localhost:4000; media-src * data: blob: ''unsafe-inline'';
-        report-uri https://o241170.ingest.sentry.io/api/5629308/security/?sentry_key=6284059d22664211881c89b4c409c619'
-      Referrer-Policy:
-      - no-referrer-when-downgrade
-      X-Frame-Options:
-      - DENY
-      Strict-Transport-Security:
-      - max-age=10368000; includeSubDomains
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vh7eZ4qJvztR3WWco2Eyp6LJlUkO78kiumSQDMT%2F31ATvUThZU6jFigAj1MgpL1qZeByRDQNXTyQnuKxqvnxDyBDyNKvEnMzf2ILnUh%2B8RIVm7K43hA2TpAQV5ay%2FlwhjVf4yg%3D%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7653d83e8989f6a5-NRT
+      Content-Type:
+      - application/atom+xml; charset=UTF-8
     body:
-      encoding: ASCII-8BIT
-      string: |2
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <title>Not Found</title>
-        </head>
-        <body>
-          <h1>Not Found</h1><p>The requested resource was not found on this server.</p>
-        </body>
-        </html>
-  recorded_at: Sat, 05 Nov 2022 07:23:34 GMT
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <feed xmlns="http://www.w3.org/2005/Atom">
+          <link href="http://arxiv.org/api/query?search_query%3Dcat%3Acs.CV%20OR%20cat%3Acs.AI%20OR%20cat%3Acs.LG%20OR%20cat%3Acs.CL%20OR%20cat%3Acs.NE%20OR%20cat%3Astat.ML%20%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml"/>
+          <title type="html">ArXiv Query: search_query=cat:cs.CV OR cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.NE OR cat:stat.ML &amp;id_list=&amp;start=0&amp;max_results=10</title>
+          <id>http://arxiv.org/api/Ng7l2usAsA+y01hV0NniA5J/7uE</id>
+          <updated>2022-11-11T00:00:00-05:00</updated>
+          <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">247561</opensearch:totalResults>
+          <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+          <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10</opensearch:itemsPerPage>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05783v1</id>
+            <updated>2022-11-10T18:59:54Z</updated>
+            <published>2022-11-10T18:59:54Z</published>
+            <title>Unifying Flow, Stereo and Depth Estimation</title>
+            <summary>  We present a unified formulation and model for three motion and 3D perception
+        tasks: optical flow, rectified stereo matching and unrectified stereo depth
+        estimation from posed images. Unlike previous specialized architectures for
+        each specific task, we formulate all three tasks as a unified dense
+        correspondence matching problem, which can be solved with a single model by
+        directly comparing feature similarities. Such a formulation calls for
+        discriminative feature representations, which we achieve using a Transformer,
+        in particular the cross-attention mechanism. We demonstrate that
+        cross-attention enables integration of knowledge from another image via
+        cross-view interactions, which greatly improves the quality of the extracted
+        features. Our unified model naturally enables cross-task transfer since the
+        model architecture and parameters are shared across tasks. We outperform RAFT
+        with our unified model on the challenging Sintel dataset, and our final model
+        that uses a few additional task-specific refinement steps outperforms or
+        compares favorably to recent state-of-the-art methods on 10 popular flow,
+        stereo and depth datasets, while being simpler and more efficient in terms of
+        model design and inference speed.
+        </summary>
+            <author>
+              <name>Haofei Xu</name>
+            </author>
+            <author>
+              <name>Jing Zhang</name>
+            </author>
+            <author>
+              <name>Jianfei Cai</name>
+            </author>
+            <author>
+              <name>Hamid Rezatofighi</name>
+            </author>
+            <author>
+              <name>Fisher Yu</name>
+            </author>
+            <author>
+              <name>Dacheng Tao</name>
+            </author>
+            <author>
+              <name>Andreas Geiger</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Project Page: https://haofeixu.github.io/unimatch, Code:
+          https://github.com/autonomousvision/unimatch</arxiv:comment>
+            <link href="http://arxiv.org/abs/2211.05783v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05783v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05781v1</id>
+            <updated>2022-11-10T18:59:43Z</updated>
+            <published>2022-11-10T18:59:43Z</published>
+            <title>Demystify Transformers &amp; Convolutions in Modern Image Deep Networks</title>
+            <summary>  Recent success of vision transformers has inspired a series of vision
+        backbones with novel feature transformation paradigms, which report steady
+        performance gain. Although the novel feature transformation designs are often
+        claimed as the source of gain, some backbones may benefit from advanced
+        engineering techniques, which makes it hard to identify the real gain from the
+        key feature transformation operators. In this paper, we aim to identify real
+        gain of popular convolution and attention operators and make an in-depth study
+        of them. We observe that the main difference among these feature transformation
+        modules, e.g., attention or convolution, lies in the way of spatial feature
+        aggregation, or the so-called "spatial token mixer" (STM). Hence, we first
+        elaborate a unified architecture to eliminate the unfair impact of different
+        engineering techniques, and then fit STMs into this architecture for
+        comparison. Based on various experiments on upstream/downstream tasks and the
+        analysis of inductive bias, we find that the engineering techniques boost the
+        performance significantly, but the performance gap still exists among different
+        STMs. The detailed analysis also reveals some interesting findings of different
+        STMs, such as effective receptive fields and invariance tests. The code and
+        trained models will be publicly available at
+        https://github.com/OpenGVLab/STM-Evaluation
+        </summary>
+            <author>
+              <name>Jifeng Dai</name>
+            </author>
+            <author>
+              <name>Min Shi</name>
+            </author>
+            <author>
+              <name>Weiyun Wang</name>
+            </author>
+            <author>
+              <name>Sitong Wu</name>
+            </author>
+            <author>
+              <name>Linjie Xing</name>
+            </author>
+            <author>
+              <name>Wenhai Wang</name>
+            </author>
+            <author>
+              <name>Xizhou Zhu</name>
+            </author>
+            <author>
+              <name>Lewei Lu</name>
+            </author>
+            <author>
+              <name>Jie Zhou</name>
+            </author>
+            <author>
+              <name>Xiaogang Wang</name>
+            </author>
+            <author>
+              <name>Yu Qiao</name>
+            </author>
+            <author>
+              <name>Xiaowei Hu</name>
+            </author>
+            <link href="http://arxiv.org/abs/2211.05781v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05781v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2210.14891v4</id>
+            <updated>2022-11-10T18:59:30Z</updated>
+            <published>2022-10-26T17:45:01Z</published>
+            <title>Broken Neural Scaling Laws</title>
+            <summary>  We present a smoothly broken power law functional form that accurately models
+        and extrapolates the scaling behaviors of deep neural networks (i.e. how the
+        evaluation metric of interest varies as the amount of compute used for
+        training, number of model parameters, training dataset size, or upstream
+        performance varies) for each task within a large and diverse set of upstream
+        and downstream tasks, in zero-shot, prompted, and fine-tuned settings. This set
+        includes large-scale vision and unsupervised language tasks, diffusion
+        generative modeling of images, arithmetic, and reinforcement learning. When
+        compared to other functional forms for neural scaling behavior, this functional
+        form yields extrapolations of scaling behavior that are considerably more
+        accurate on this set. Moreover, this functional form accurately models and
+        extrapolates scaling behavior that other functional forms are incapable of
+        expressing such as the non-monotonic transitions present in the scaling
+        behavior of phenomena such as double descent and the delayed, sharp inflection
+        points present in the scaling behavior of tasks such as arithmetic. Lastly, we
+        use this functional form to glean insights about the limit of the
+        predictability of scaling behavior. Code is available at
+        https://github.com/ethancaballero/broken_neural_scaling_laws
+        </summary>
+            <author>
+              <name>Ethan Caballero</name>
+            </author>
+            <author>
+              <name>Kshitij Gupta</name>
+            </author>
+            <author>
+              <name>Irina Rish</name>
+            </author>
+            <author>
+              <name>David Krueger</name>
+            </author>
+            <link href="http://arxiv.org/abs/2210.14891v4" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2210.14891v4" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05778v1</id>
+            <updated>2022-11-10T18:59:04Z</updated>
+            <published>2022-11-10T18:59:04Z</published>
+            <title>InternImage: Exploring Large-Scale Vision Foundation Models with
+          Deformable Convolutions</title>
+            <summary>  Compared to the great progress of large-scale vision transformers (ViTs) in
+        recent years, large-scale models based on convolutional neural networks (CNNs)
+        are still in an early state. This work presents a new large-scale CNN-based
+        foundation model, termed InternImage, which can obtain the gain from increasing
+        parameters and training data like ViTs. Different from the recent CNNs that
+        focus on large dense kernels, InternImage takes deformable convolution as the
+        core operator, so that our model not only has the large effective receptive
+        field required for downstream tasks such as detection and segmentation, but
+        also has the adaptive spatial aggregation conditioned by input and task
+        information. As a result, the proposed InternImage reduces the strict inductive
+        bias of traditional CNNs and makes it possible to learn stronger and more
+        robust patterns with large-scale parameters from massive data like ViTs. The
+        effectiveness of our model is proven on challenging benchmarks including
+        ImageNet, COCO, and ADE20K. It is worth mentioning that InternImage-H achieved
+        the new record 65.4 mAP on COCO test-dev. The code will be released at
+        https://github.com/OpenGVLab/InternImage.
+        </summary>
+            <author>
+              <name>Wenhai Wang</name>
+            </author>
+            <author>
+              <name>Jifeng Dai</name>
+            </author>
+            <author>
+              <name>Zhe Chen</name>
+            </author>
+            <author>
+              <name>Zhenhang Huang</name>
+            </author>
+            <author>
+              <name>Zhiqi Li</name>
+            </author>
+            <author>
+              <name>Xizhou Zhu</name>
+            </author>
+            <author>
+              <name>Xiaowei Hu</name>
+            </author>
+            <author>
+              <name>Tong Lu</name>
+            </author>
+            <author>
+              <name>Lewei Lu</name>
+            </author>
+            <author>
+              <name>Hongsheng Li</name>
+            </author>
+            <author>
+              <name>Xiaogang Wang</name>
+            </author>
+            <author>
+              <name>Yu Qiao</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">technical report</arxiv:comment>
+            <link href="http://arxiv.org/abs/2211.05778v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05778v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05777v1</id>
+            <updated>2022-11-10T18:58:30Z</updated>
+            <published>2022-11-10T18:58:30Z</published>
+            <title>Hybrid quantum neural network for drug response prediction</title>
+            <summary>  Cancer is one of the leading causes of death worldwide. It is caused by a
+        variety of genetic mutations, which makes every instance of the disease unique.
+        Since chemotherapy can have extremely severe side effects, each patient
+        requires a personalized treatment plan. Finding the dosages that maximize the
+        beneficial effects of the drugs and minimize their adverse side effects is
+        vital. Deep neural networks automate and improve drug selection. However, they
+        require a lot of data to be trained on. Therefore, there is a need for
+        machine-learning approaches that require less data. Hybrid quantum neural
+        networks were shown to provide a potential advantage in problems where training
+        data availability is limited. We propose a novel hybrid quantum neural network
+        for drug response prediction, based on a combination of convolutional, graph
+        convolutional, and deep quantum neural layers of 8 qubits with 363 layers. We
+        test our model on the reduced Genomics of Drug Sensitivity in Cancer dataset
+        and show that the hybrid quantum model outperforms its classical analog by 15%
+        in predicting IC50 drug effectiveness values. The proposed hybrid quantum
+        machine learning model is a step towards deep quantum data-efficient algorithms
+        with thousands of quantum gates for solving problems in personalized medicine,
+        where data collection is a challenge.
+        </summary>
+            <author>
+              <name>Asel Sagingalieva</name>
+            </author>
+            <author>
+              <name>Mohammad Kordzanganeh</name>
+            </author>
+            <author>
+              <name>Nurbolat Kenbayev</name>
+            </author>
+            <author>
+              <name>Daria Kosichkina</name>
+            </author>
+            <author>
+              <name>Tatiana Tomashuk</name>
+            </author>
+            <author>
+              <name>Alexey Melnikov</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages, 3 figures</arxiv:comment>
+            <link href="http://arxiv.org/abs/2211.05777v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05777v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05776v1</id>
+            <updated>2022-11-10T18:58:22Z</updated>
+            <published>2022-11-10T18:58:22Z</published>
+            <title>Fine-Grained Entity Segmentation</title>
+            <summary>  In dense image segmentation tasks (e.g., semantic, panoptic), existing
+        methods can hardly generalize well to unseen image domains, predefined classes,
+        and image resolution &amp; quality variations. Motivated by these observations, we
+        construct a large-scale entity segmentation dataset to explore fine-grained
+        entity segmentation, with a strong focus on open-world and high-quality dense
+        segmentation. The dataset contains images spanning diverse image domains and
+        resolutions, along with high-quality mask annotations for training and testing.
+        Given the high-quality and -resolution nature of the dataset, we propose
+        CropFormer for high-quality segmentation, which can improve mask prediction
+        using high-res image crops that provide more fine-grained image details than
+        the full image. CropFormer is the first query-based Transformer architecture
+        that can effectively ensemble mask predictions from multiple image crops, by
+        learning queries that can associate the same entities across the full image and
+        its crop. With CropFormer, we achieve a significant AP gain of $1.9$ on the
+        challenging fine-grained entity segmentation task. The dataset and code will be
+        released at http://luqi.info/entityv2.github.io/.
+        </summary>
+            <author>
+              <name>Lu Qi</name>
+            </author>
+            <author>
+              <name>Jason Kuen</name>
+            </author>
+            <author>
+              <name>Weidong Guo</name>
+            </author>
+            <author>
+              <name>Tiancheng Shen</name>
+            </author>
+            <author>
+              <name>Jiuxiang Gu</name>
+            </author>
+            <author>
+              <name>Wenbo Li</name>
+            </author>
+            <author>
+              <name>Jiaya Jia</name>
+            </author>
+            <author>
+              <name>Zhe Lin</name>
+            </author>
+            <author>
+              <name>Ming-Hsuan Yang</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">The project webiste: http://luqi.info/entityv2.github.io/</arxiv:comment>
+            <link href="http://arxiv.org/abs/2211.05776v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05776v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05773v1</id>
+            <updated>2022-11-10T18:58:00Z</updated>
+            <published>2022-11-10T18:58:00Z</published>
+            <title>Scaling Neural Face Synthesis to High FPS and Low Latency by Neural
+          Caching</title>
+            <summary>  Recent neural rendering approaches greatly improve image quality, reaching
+        near photorealism. However, the underlying neural networks have high runtime,
+        precluding telepresence and virtual reality applications that require high
+        resolution at low latency. The sequential dependency of layers in deep networks
+        makes their optimization difficult. We break this dependency by caching
+        information from the previous frame to speed up the processing of the current
+        one with an implicit warp. The warping with a shallow network reduces latency
+        and the caching operations can further be parallelized to improve the frame
+        rate. In contrast to existing temporal neural networks, ours is tailored for
+        the task of rendering novel views of faces by conditioning on the change of the
+        underlying surface mesh. We test the approach on view-dependent rendering of 3D
+        portrait avatars, as needed for telepresence, on established benchmark
+        sequences. Warping reduces latency by 70$\%$ (from 49.4ms to 14.9ms on
+        commodity GPUs) and scales frame rates accordingly over multiple GPUs while
+        reducing image quality by only 1$\%$, making it suitable as part of end-to-end
+        view-dependent 3D teleconferencing applications. Our project page can be found
+        at: https://yu-frank.github.io/lowlatency/.
+        </summary>
+            <author>
+              <name>Frank Yu</name>
+            </author>
+            <author>
+              <name>Sid Fels</name>
+            </author>
+            <author>
+              <name>Helge Rhodin</name>
+            </author>
+            <link href="http://arxiv.org/abs/2211.05773v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05773v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2209.15001v2</id>
+            <updated>2022-11-10T18:57:10Z</updated>
+            <published>2022-09-29T17:57:08Z</published>
+            <title>Dilated Neighborhood Attention Transformer</title>
+            <summary>  Transformers are quickly becoming one of the most heavily applied deep
+        learning architectures across modalities, domains, and tasks. In vision, on top
+        of ongoing efforts into plain transformers, hierarchical transformers have also
+        gained significant attention, thanks to their performance and easy integration
+        into existing frameworks. These models typically employ localized attention
+        mechanisms, such as the sliding-window Neighborhood Attention (NA) or Swin
+        Transformer's Shifted Window Self Attention. While effective at reducing self
+        attention's quadratic complexity, local attention weakens two of the most
+        desirable properties of self attention: long range inter-dependency modeling,
+        and global receptive field. In this paper, we introduce Dilated Neighborhood
+        Attention (DiNA), a natural, flexible and efficient extension to NA that can
+        capture more global context and expand receptive fields exponentially at no
+        additional cost. NA's local attention and DiNA's sparse global attention
+        complement each other, and therefore we introduce Dilated Neighborhood
+        Attention Transformer (DiNAT), a new hierarchical vision transformer built upon
+        both. DiNAT variants enjoy significant improvements over strong baselines such
+        as NAT, Swin, and ConvNeXt. Our large model is faster and ahead of its Swin
+        counterpart by 1.5% box AP in COCO object detection, 1.3% mask AP in COCO
+        instance segmentation, and 1.1% mIoU in ADE20K semantic segmentation. Paired
+        with new frameworks, our large variant is the new state of the art panoptic
+        segmentation model on COCO (58.2 PQ) and ADE20K (48.5 PQ), and instance
+        segmentation model on Cityscapes (44.5 AP) and ADE20K (35.4 AP) (no extra
+        data). It also matches the state of the art specialized semantic segmentation
+        models on ADE20K (58.2 mIoU), and ranks second on Cityscapes (84.5 mIoU) (no
+        extra data). We open-source our project.
+        </summary>
+            <author>
+              <name>Ali Hassani</name>
+            </author>
+            <author>
+              <name>Humphrey Shi</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">We open-source our project at:
+          https://github.com/SHI-Labs/Neighborhood-Attention-Transformer</arxiv:comment>
+            <link href="http://arxiv.org/abs/2209.15001v2" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2209.15001v2" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2204.07143v4</id>
+            <updated>2022-11-10T18:55:49Z</updated>
+            <published>2022-04-14T17:55:15Z</published>
+            <title>Neighborhood Attention Transformer</title>
+            <summary>  We present Neighborhood Attention (NA), the first efficient and scalable
+        sliding-window attention mechanism for vision. NA is a pixel-wise operation,
+        localizing self attention (SA) to the nearest neighboring pixels, and therefore
+        enjoys a linear time and space complexity compared to the quadratic complexity
+        of SA. The sliding-window pattern allows NA's receptive field to grow without
+        needing extra pixel shifts, and preserves translational equivariance, unlike
+        Swin Transformer's Window Self Attention (WSA). We develop NATTEN (Neighborhood
+        Attention Extension), a Python package with efficient C++ and CUDA kernels,
+        which allows NA to run up to 40% faster than Swin's WSA while using up to 25%
+        less memory. We further present Neighborhood Attention Transformer (NAT), a new
+        hierarchical transformer design based on NA that boosts image classification
+        and downstream vision performance. Experimental results on NAT are competitive;
+        NAT-Tiny reaches 83.2% top-1 accuracy on ImageNet, 51.4% mAP on MS-COCO and
+        48.4% mIoU on ADE20K, which is 1.9% ImageNet accuracy, 1.0% COCO mAP, and 2.6%
+        ADE20K mIoU improvement over a Swin model with similar size. To support more
+        research based on sliding-window attention, we open source our project and
+        release our checkpoints at:
+        https://github.com/SHI-Labs/Neighborhood-Attention-Transformer .
+        </summary>
+            <author>
+              <name>Ali Hassani</name>
+            </author>
+            <author>
+              <name>Steven Walton</name>
+            </author>
+            <author>
+              <name>Jiachen Li</name>
+            </author>
+            <author>
+              <name>Shen Li</name>
+            </author>
+            <author>
+              <name>Humphrey Shi</name>
+            </author>
+            <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Revision with details on our new Neighborhood Attention Extension
+          (NATTEN), along with analysis on translational equivariance in
+          attention-based models. NATTEN is open-sourced at:
+          https://github.com/SHI-Labs/NATTEN/</arxiv:comment>
+            <link href="http://arxiv.org/abs/2204.07143v4" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2204.07143v4" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+          <entry>
+            <id>http://arxiv.org/abs/2211.05770v1</id>
+            <updated>2022-11-10T18:55:48Z</updated>
+            <published>2022-11-10T18:55:48Z</published>
+            <title>StyleNAT: Giving Each Head a New Perspective</title>
+            <summary>  Image generation has been a long sought-after but challenging task, and
+        performing the generation task in an efficient manner is similarly difficult.
+        Often researchers attempt to create a "one size fits all" generator, where
+        there are few differences in the parameter space for drastically different
+        datasets. Herein, we present a new transformer-based framework, dubbed
+        StyleNAT, targeting high-quality image generation with superior efficiency and
+        flexibility. At the core of our model, is a carefully designed framework that
+        partitions attention heads to capture local and global information, which is
+        achieved through using Neighborhood Attention (NA). With different heads able
+        to pay attention to varying receptive fields, the model is able to better
+        combine this information, and adapt, in a highly flexible manner, to the data
+        at hand. StyleNAT attains a new SOTA FID score on FFHQ-256 with 2.046, beating
+        prior arts with convolutional models such as StyleGAN-XL and transformers such
+        as HIT and StyleSwin, and a new transformer SOTA on FFHQ-1024 with an FID score
+        of 4.174. These results show a 6.4% improvement on FFHQ-256 scores when
+        compared to StyleGAN-XL with a 28% reduction in the number of parameters and
+        56% improvement in sampling throughput. Code and models will be open-sourced at
+        https://github.com/SHI-Labs/StyleNAT .
+        </summary>
+            <author>
+              <name>Steven Walton</name>
+            </author>
+            <author>
+              <name>Ali Hassani</name>
+            </author>
+            <author>
+              <name>Xingqian Xu</name>
+            </author>
+            <author>
+              <name>Zhangyang Wang</name>
+            </author>
+            <author>
+              <name>Humphrey Shi</name>
+            </author>
+            <link href="http://arxiv.org/abs/2211.05770v1" rel="alternate" type="text/html"/>
+            <link title="pdf" href="http://arxiv.org/pdf/2211.05770v1" rel="related" type="application/pdf"/>
+            <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+            <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+          </entry>
+        </feed>
+  recorded_at: Fri, 11 Nov 2022 17:54:41 GMT
 recorded_with: VCR 6.1.0

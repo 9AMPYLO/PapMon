@@ -32,5 +32,6 @@
       .col-lg-11.col-md-10.col-sm-6
         span.paper.detail
           - paper.repositories.each do |repo|
-            = repo.url
+            a href='#{repo.url}' style="color:rgb(255, 242, 218);"
+                = "#{repo.url}"
             br

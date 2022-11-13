@@ -1,23 +1,29 @@
 # frozen_string_literal: true
 
 require 'http'
+require 'yaml'
+require 'active_support/all'
 
 # PaperWithCode API module
 module PapMon
   # PaperWithCode API
-  class PapersWithCodeApi
-    API_PROJECT_ROOT = 'https://paperswithcode.com/api/v1/'
-
-    def paper_data(arxiv_id)
-      Request.new.paper(arxiv_id).parse
+  class ArxivApi
+    def arxiv_paper
+      parse(Request.new.arxiv_paper)
     end
 
-    def datasets_data(paper_id)
-      Request.new.datasets(paper_id).parse
-    end
+    def parse(xml)
+      arxiv_result = []
 
-    def repositories_data(paper_id)
-      Request.new.repositories(paper_id).parse
+      xml_hash = Hash.from_xml(xml)
+      xml_hash = xml_hash['feed']['entry']
+      xml_hash.each do |paper_element|
+        arxiv_paper = {}
+        arxiv_paper["arxiv_id"] = paper_element['id'][21..30]
+        arxiv_paper["primary_category"] = paper_element['primary_category']['term']
+        arxiv_result.append(arxiv_paper)
+      end
+      arxiv_result
     end
 
     # request class
@@ -29,19 +35,8 @@ module PapMon
         end
       end
 
-      def paper(arxiv_id)
-        paper_url = API_PROJECT_ROOT + ["papers", "?arxiv_id=#{arxiv_id}"].join('/')
-        get(paper_url)
-      end
-
-      def datasets(paper_id)
-        datasets_url = API_PROJECT_ROOT + ['papers', paper_id, 'datasets', ''].join('/')
-        get(datasets_url)
-      end
-
-      def repositories(paper_id)
-        repo_url = API_PROJECT_ROOT + ['papers', paper_id, 'repositories', ''].join('/')
-        get(repo_url)
+      def arxiv_paper
+        get('http://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.NE+OR+cat:stat.ML+&sortBy=lastUpdatedDate&sortOrder=descending')
       end
     end
 

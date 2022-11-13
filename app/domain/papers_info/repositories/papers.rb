@@ -18,6 +18,10 @@ module PapMon
         rebuild_entity Database::PaperOrm.first(origin_id:)
       end
 
+      def self.find_arxiv_id(arxiv_id)
+        rebuild_entity Database::PaperOrm.first(arxiv_id:)
+      end
+
       def self.find(entity)
         find_origin_id(entity.origin_id)
       end

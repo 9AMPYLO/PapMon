@@ -67,6 +67,11 @@ h1 {
     justify-content: center; /* Optional, to align inner items 
                                 horizontally inside the column */
   }
+
+  .vertical-align-for-btn{
+    align-items: center;
+    justify-content: center;
+  }
   
   .top-buffer { margin-top:20px; }
   
@@ -93,3 +98,32 @@ h1 {
     font-size:11px;
     color:rgb(100, 100, 100);
   }
+
+
+  .primary-category-bar {
+    padding: 5px 5px 5px 5px;
+  }
+
+  .primary-category{
+    color: whitesmoke;
+    font-size:x-large;
+    font-weight:lighter;
+  }
+
+  .hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .card-title-expend{
+    color:darkgoldenrod;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  a.link{
+    color: white;
+  }
+

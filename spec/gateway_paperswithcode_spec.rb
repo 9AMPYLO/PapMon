@@ -1,38 +1,50 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper'
+require_relative 'helpers/spec_helper'
 require_relative 'helpers/vcr_helper'
 
 describe 'Test Paperswithcode API Library' do
+  VcrHelper.setup_vcr
+
   before do
     VcrHelper.configure_vcr_for_paperswithcode
+    VcrHelper.configure_vcr_for_arxiv
   end
 
   after do
     VcrHelper.eject_vcr
+    VcrHelper.eject_vcr
+  end
+
+  describe 'Arxiv API information' do
+    it 'HAPPY: should get the latest paper from arxiv' do
+      arxiv = PapMon::Arxiv::ArxivMapper.new.newest10
+      arxiv = arxiv[0]
+      _(arxiv.arxiv_id).must_equal ARXIV_CORRECT['arxiv_id']
+      _(arxiv.primary_category).must_equal ARXIV_CORRECT['primary_category']
+    end
   end
 
   describe 'Paper information' do
     it 'HAPPY: should provide correct paper information' do
-      paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
-      _(paper.origin_id).must_equal CORRECT['id']
-      _(paper.arxiv_id).must_equal CORRECT['arxiv_id']
-      _(paper.url_abs).must_equal CORRECT['url_abs']
-      _(paper.title).must_equal CORRECT['title']
-      _(paper.published).must_equal CORRECT['published']
-      _(paper.proceeding).must_equal CORRECT['proceeding']
-    end
-
-    it 'SAD: should raise exception on invalid paper name' do
-      _(proc {
-          PapMon::PapersWithCode::PaperMapper.new.find('be-your-own-teacher')
-        }).must_raise PapMon::PapersWithCodeApi::Response::NotFound
+      paper = PapMon::PapersWithCode::PaperMapper.new.find(LATEST_ARXIV)
+      _(paper.origin_id).must_equal PWC_CORRECT['id']
+      _(paper.arxiv_id).must_equal PWC_CORRECT['arxiv_id']
+      _(paper.primary_category).must_equal PWC_CORRECT['primary_category']
+      _(paper.url_abs).must_equal PWC_CORRECT['url_abs']
+      _(paper.title).must_equal PWC_CORRECT['title']
+      _(paper.published).must_equal PWC_CORRECT['published']
+      if PWC_CORRECT['proceeding'].nil?
+        _(paper.proceeding).must_be_nil
+      else
+        _(paper.proceeding).must_equal PWC_CORRECT['proceeding']
+      end
     end
   end
 
   describe 'Dataset information' do
     before do
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(LATEST_ARXIV)
     end
 
     it 'HAPPY: should recognize datasets' do
@@ -47,16 +59,16 @@ describe 'Test Paperswithcode API Library' do
 
     it 'HAPPY: should provide correct dataset information' do
       datasets = @paper.datasets
-      _(datasets.count).must_equal CORRECT['datasets'].count
+      _(datasets.count).must_equal PWC_CORRECT['datasets'].count
       datasets_names = datasets.map(&:name)
-      correct_datasets_names = CORRECT['datasets'].map { |d| d['name'] }
+      correct_datasets_names = PWC_CORRECT['datasets'].map { |d| d['name'] }
       _(datasets_names).must_equal correct_datasets_names
     end
   end
 
   describe 'Repository information' do
     before do
-      @paper = PapMon::PapersWithCode::PaperMapper.new.find(PAPERID)
+      @paper = PapMon::PapersWithCode::PaperMapper.new.find(LATEST_ARXIV)
     end
 
     it 'HAPPY: should recognize repositories' do
@@ -71,9 +83,9 @@ describe 'Test Paperswithcode API Library' do
 
     it 'HAPPY: should provide correct repository information' do
       repos = @paper.repositories
-      _(repos.count).must_equal CORRECT['repositories'].count
+      _(repos.count).must_equal PWC_CORRECT['repositories'].count
       repos_urls = repos.map(&:url)
-      correct_repos_urls = CORRECT['repositories'].map { |d| d['url'] }
+      correct_repos_urls = PWC_CORRECT['repositories'].map { |d| d['url'] }
       _(repos_urls).must_equal correct_repos_urls
     end
   end

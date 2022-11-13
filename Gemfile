@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby File.read('.ruby-version').strip
 
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
@@ -10,6 +11,9 @@ gem 'rake'
 gem 'puma', '~> 6'
 gem 'roda', '~> 3'
 gem 'slim', '~> 4'
+
+# Parse
+gem 'activesupport'
 
 # Validation
 gem 'dry-struct', '~> 1'
@@ -25,6 +29,10 @@ gem 'sequel', '~> 5.49'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Testing

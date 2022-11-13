@@ -9,8 +9,9 @@ module PapMon
         @gateway = @gateway_class.new
       end
 
-      def find(paper_name)
-        data = @gateway.paper_data(paper_name)
+      def find(arxiv_entity)
+        data = @gateway.paper_data(arxiv_entity.arxiv_id)['results'][0]
+        data.merge!(primary_category: arxiv_entity.primary_category)
         build_entity(data)
       end
 
@@ -32,6 +33,7 @@ module PapMon
           id: nil,
           origin_id:,
           arxiv_id:,
+          primary_category:,
           url_abs:,
           title:,
           authors:,
@@ -48,6 +50,10 @@ module PapMon
 
       def arxiv_id
         @data['arxiv_id']
+      end
+
+      def primary_category
+        @data[:primary_category]
       end
 
       def url_abs
