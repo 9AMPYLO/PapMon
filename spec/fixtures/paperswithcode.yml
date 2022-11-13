@@ -52,6 +52,6 @@ repositories:
   owner: autonomousvision
   name: unimatch
   description: Unifying Flow, Stereo and Depth Estimation
-  stars: 52
-  framework: none
+  stars: 118
+  framework: pytorch
   is_official: true

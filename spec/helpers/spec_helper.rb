@@ -11,7 +11,7 @@ require 'yaml'
 require 'vcr'
 require 'webmock'
 
-require_relative '../require_app'
+require_relative '../../require_app'
 require_app
 
 system('ruby spec/helpers/get_latest_paper.rb')

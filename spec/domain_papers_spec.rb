@@ -20,8 +20,13 @@ describe 'Test Paperswithcode API Library' do
 
   describe 'HAPPY: should get accurate count of papers' do
     it 'HAPPY: should get accurate count of papers' do
-      root = PapMon::Arxiv::PapersMapper.new.newest10
-      _(root.category_and_count.count).must_equal 10
+      root = PapMon::Arxiv::PapersMapper.new.newest10 # Papers Entity
+      _(root.category_and_count.count).must_equal 14
+      sum = 0
+      root.category_and_count.each do |key, value|
+        sum += value if key[0] == 'n'
+      end
+      _(sum).must_equal 10
     end
   end
 end
