@@ -22,7 +22,7 @@ task :run do
   sh 'bundle exec puma'
 end
 
-namespace :db do
+namespace :db do # rubocop:disable Metrics/BlockLength
   task :config do
     require 'sequel'
     require_relative 'config/environment'
@@ -46,6 +46,7 @@ namespace :db do
     end
 
     require_app('infrastructure')
+    require_relative 'spec/helpers/database_helper'
     DatabaseHelper.wipe_database
   end
 
@@ -56,8 +57,10 @@ namespace :db do
       return
     end
 
-    FileUtils.rm(PapMon::App.config.DB_FILENAME)
-    puts "Deleted #{PapMon::App.config.DB_FILENAME}"
+    # FileUtils.rm(PapMon::App.config.DB_FILENAME)
+    # puts "Deleted #{PapMon::App.config.DB_FILENAME}"
+    FileUtils.rm(app.config.DB_FILENAME)
+    puts "Deleted #{app.config.DB_FILENAME}"
   end
 end
 
