@@ -1,19 +1,8 @@
 .container
-  .div-small
-  form role="form" action="/paper" method='POST' id='show-paper-form'
-    .row.vertical-align.query-bar
-      .col-md-2.col-sm-3
-        .text-right Paper ID:
-      .col-md-8.col-sm-6
-        input { 
-          type='text' name='id'
-          id='id_input' class="form-control"
-          placeholder="e.g. be-your-own-teacher-improve-the-performance"
-        }
-      .col-md-2.col-sm-3
-        button { 
-          type='submit' id='repo-form-submit' class='submit' 
-          value='submit' class="btn btn-success" 
-        } Show Paper
-    .row
-      .col-md-12.blank-row
+  .row.vertical-align-for-btn
+    .div-small
+    form role="form" action="/arxiv" method='POST' id='show-paper-form'
+      button { 
+        type='submit' id='get-newestpaper-btn' class='submit' 
+        value='submit' class="btn btn-outline-light" 
+      } Get newest 10 arxiv paper on CV or AI

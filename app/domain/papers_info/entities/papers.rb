@@ -19,6 +19,7 @@ module PapMon
         papersNE=[]
         papersML=[]
         papersOTHER=[]
+        puts papersOTHER.class
         @papers.each do |paper|
           case paper.primary_category
           when Value::Category::CV.name
@@ -35,6 +36,7 @@ module PapMon
             papersML << paper
           else
             papersOTHER << paper
+            puts "~~~~~~~s"
           end
         end
         {"paperCV"=>papersCV, "nCV"=>papersCV.length,

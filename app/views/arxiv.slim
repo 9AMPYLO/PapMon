@@ -1,0 +1,177 @@
+.container
+  .div-small
+  .container
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_CV" role="button" aria-expanded="false" aria-controls="category_CV"} Computer Vision 
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nCV
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_CV"}
+        - paperCV.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+
+
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_AI" role="button" aria-expanded="false" aria-controls="category_AI"} Artificial Intelligence 
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nAI
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_AI"}
+        - paperAI.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_LG" role="button" aria-expanded="false" aria-controls="category_LG"} Computer Science Machine Learning 
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nLG
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_LG"}
+        - paperLG.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+    
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_CL" role="button" aria-expanded="false" aria-controls="category_CL"} Computation and Language 
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nCL
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_CL"}
+        - paperCL.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_NE" role="button" aria-expanded="false" aria-controls="category_NE"} Neural and Evolutionary Computing 
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nNE
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_NE"}
+        - paperNE.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_ML" role="button" aria-expanded="false" aria-controls="category_ML"} Statistics Machine Learning
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nML
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_ML"}
+        - paperML.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
+
+
+    .row
+      .col-lg-12.col-md-12.col-sm-8.primary-category-bar
+        span.button.primary-category {data-bs-toggle="collapse" href="#category_OTHER" role="button" aria-expanded="false" aria-controls="category_OTHER"} Others
+        span 　
+        span.badge {class="rounded-pill text-bg-secondary" style="font-size:small;"} =nOTHER
+      .hr
+      .div-small {class="collapse multi-collapse" id="category_OTHER"}
+        - paperOTHER.each do |p|
+          .row
+            .col-lg-12.col-md-12.col-sm-8
+              form role="form" action="/paper" method='POST'
+                .card
+                  .card-body 
+                    .card-title-expend 
+                      .card-title
+                        = "#{p.title}"
+                    .card-text 
+                      = "#{p.published}"
+                  button { 
+                    type='submit' class='submit' name='arxiv_id' value='#{p.arxiv_id}' class="btn btn-outline-secondary"
+                  } See more...
+          .row
+            .div-small
