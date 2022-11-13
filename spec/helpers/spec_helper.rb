@@ -18,6 +18,3 @@ system('ruby spec/helpers/get_latest_paper.rb')
 ARXIV_CORRECT = YAML.safe_load(File.read('spec/fixtures/arxiv.yml'))
 PWC_CORRECT = YAML.safe_load(File.read('spec/fixtures/paperswithcode.yml'))
 LATEST_ARXIV = PapMon::Arxiv::ArxivMapper.new.newest10[0]
-
-# CASSETTES_FOLDER = 'spec/fixtures/cassettes'
-# CASSETTE_FILE = 'paperswithcode_api'

@@ -40,12 +40,6 @@ describe 'Test Paperswithcode API Library' do
         _(paper.proceeding).must_equal PWC_CORRECT['proceeding']
       end
     end
-
-    # it 'SAD: should raise exception on invalid paper name' do
-    #   _(proc {
-    #       PapMon::PapersWithCode::PaperMapper.new.find('invalid')
-    #     }).must_raise PapMon::PapersWithCodeApi::Response::NotFound
-    # end
   end
 
   describe 'Dataset information' do

@@ -57,8 +57,6 @@ namespace :db do # rubocop:disable Metrics/BlockLength
       return
     end
 
-    # FileUtils.rm(PapMon::App.config.DB_FILENAME)
-    # puts "Deleted #{PapMon::App.config.DB_FILENAME}"
     FileUtils.rm(app.config.DB_FILENAME)
     puts "Deleted #{app.config.DB_FILENAME}"
   end

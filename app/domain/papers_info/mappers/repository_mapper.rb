@@ -35,14 +35,6 @@ module PapMon
         def url
           @data['url']
         end
-
-        # def owner
-        #   @data['owner']
-        # end
-
-        # def repo_name
-        #   @data['name']
-        # end
       end
     end
   end

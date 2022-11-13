@@ -42,10 +42,6 @@ module PapMon
           @data['name']
         end
 
-        # def full_name
-        #   @data['full_name']
-        # end
-
         def url
           @data['url']
         end
