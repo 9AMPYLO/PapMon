@@ -6,7 +6,7 @@ def require_app(folders = %w[infrastructure domain views controllers])
   full_list = ['config', app_list].flatten.join(',')
 
   Dir.glob("./{#{full_list}}/**/*.rb").each do |file|
-    puts "Loading #{file}"
+    # puts "Loading #{file}"
     require file
   end
 end

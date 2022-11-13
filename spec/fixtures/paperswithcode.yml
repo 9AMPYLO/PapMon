@@ -1,0 +1,57 @@
+---
+id: unifying-flow-stereo-and-depth-estimation
+arxiv_id: '2211.05783'
+url_abs: https://arxiv.org/abs/2211.05783v1
+title: Unifying Flow, Stereo and Depth Estimation
+published: '2022-11-10'
+proceeding:
+primary_category: cs.CV
+datasets:
+- id: middlebury
+  name: Middlebury
+  full_name: Middlebury Stereo
+  url: https://vision.middlebury.edu/stereo/data/
+- id: flyingthings3d
+  name: FlyingThings3D
+  full_name: ''
+  url: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
+- id: kitti
+  name: KITTI
+  full_name: ''
+  url: http://www.cvlibs.net/datasets/kitti/
+- id: tartanair
+  name: TartanAir
+  full_name: ''
+  url: http://theairlab.org/tartanair-dataset/
+- id: sun3d
+  name: SUN3D
+  full_name: SUN3D
+  url: http://sun3d.cs.princeton.edu/
+- id: scannet
+  name: ScanNet
+  full_name: ''
+  url: http://www.scan-net.org/
+- id: flyingchairs
+  name: FlyingChairs
+  full_name: ''
+  url: https://lmb.informatik.uni-freiburg.de/resources/datasets/FlyingChairs.en.html
+- id: virtual-kitti-2
+  name: Virtual KITTI 2
+  full_name: ''
+  url: https://europe.naverlabs.com/Research/Computer-Vision/Proxy-Virtual-Worlds
+- id: eth3d
+  name: ETH3D
+  full_name: ''
+  url: https://www.eth3d.net/
+- id: argoverse
+  name: Argoverse
+  full_name: ''
+  url: https://www.argoverse.org/data.html
+repositories:
+- url: https://github.com/autonomousvision/unimatch
+  owner: autonomousvision
+  name: unimatch
+  description: Unifying Flow, Stereo and Depth Estimation
+  stars: 52
+  framework: none
+  is_official: true
