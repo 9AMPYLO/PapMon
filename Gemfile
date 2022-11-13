@@ -14,6 +14,7 @@ gem 'slim', '~> 4'
 
 # Parse
 gem 'activesupport'
+gem 'rexml'
 
 # Validation
 gem 'dry-struct', '~> 1'
