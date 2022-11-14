@@ -10,6 +10,7 @@ require_relative 'repository'
 module PapMon
   # Entity module
   module Entity
+    # Paper Entity
     class Paper < Dry::Struct
       include Dry.Types
       attribute :id, Integer.optional

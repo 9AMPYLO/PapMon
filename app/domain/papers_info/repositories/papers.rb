@@ -30,8 +30,21 @@ module PapMon
         rebuild_entity Database::PaperOrm.first(url_abs:)
       end
 
-      def self.create(entity)
-        raise 'Paper already exists' if find(entity)
+      def self.create(entity) # rubocop:disable Metrics/MethodLength
+        if find(entity)
+          return PapMon::Entity::Paper.new(
+            id: 0,
+            origin_id: entity.origin_id,
+            arxiv_id: entity.arxiv_id,
+            primary_category: entity.primary_category,
+            url_abs: entity.url_abs,
+            title: entity.title,
+            published: entity.published,
+            proceeding: entity.proceeding,
+            repositories: entity.repositories,
+            datasets: entity.datasets
+          )
+        end
 
         db_paper = PersistPaper.new(entity).call
         rebuild_entity(db_paper)
@@ -55,7 +68,7 @@ module PapMon
         end
 
         def create_paper
-          Database::PaperOrm.create(@entity.to_attr_hash)
+          Database::PaperOrm.find_or_create(@entity.to_attr_hash)
         end
 
         def call
