@@ -24,6 +24,7 @@ module PapMon
       def build_papers_entity(arxiv_entities)
         PapMon::Entity::Papers.new(papers: paper_summaries(arxiv_entities))
       end
+
       def paper_summaries(arxiv_entities)
         arxiv_entities.map do |arxiv_entity|
           PapersWithCode::PaperMapper.new.find(arxiv_entity)

@@ -19,8 +19,8 @@ module PapMon
       xml_hash = xml_hash['feed']['entry']
       xml_hash.each do |paper_element|
         arxiv_paper = {}
-        arxiv_paper["arxiv_id"] = paper_element['id'][21..30]
-        arxiv_paper["primary_category"] = paper_element['primary_category']['term']
+        arxiv_paper['arxiv_id'] = paper_element['id'][21..30]
+        arxiv_paper['primary_category'] = paper_element['primary_category']['term']
         arxiv_result.append(arxiv_paper)
       end
       arxiv_result
@@ -36,7 +36,7 @@ module PapMon
       end
 
       def arxiv_paper
-        get('http://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.NE+OR+cat:stat.ML+&sortBy=lastUpdatedDate&sortOrder=descending')
+        get('http://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.NE+OR+cat:stat.ML+&sortBy=lastUpdatedDate&sortOrder=descending&max_results=2')
       end
     end
 

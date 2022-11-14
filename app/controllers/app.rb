@@ -11,7 +11,7 @@ module PapMon
     plugin :common_logger, $stderr
     plugin :halt
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       routing.assets # load CSS
       response['Content-Type'] = 'text/html; charset=utf-8'
 
@@ -26,7 +26,6 @@ module PapMon
           # POST /paper/
           routing.post do
             arxiv_paper = Arxiv::PapersMapper.new.newest10
-
             arxiv_paper.papers.each do |each_paper|
               Repository::For.entity(each_paper).create(each_paper)
             end
