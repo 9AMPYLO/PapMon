@@ -36,7 +36,7 @@ module PapMon
       end
 
       def arxiv_paper
-        get('http://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.NE+OR+cat:stat.ML+&sortBy=lastUpdatedDate&sortOrder=descending&max_results=2')
+        get('http://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL+OR+cat:cs.NE+OR+cat:stat.ML+&sortBy=lastUpdatedDate&sortOrder=descending&max_results=10')
       end
     end
 
